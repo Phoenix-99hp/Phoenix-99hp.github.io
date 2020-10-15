@@ -1,6 +1,7 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 export const PageContainer = styled.div`
+    opacity: 0;
     display: flex;
     min-height: 100vh;
     flex-direction: column;
@@ -8,6 +9,10 @@ export const PageContainer = styled.div`
     flex-flow: column;
     height: 100%;
     background-color: #070707;
+    transition: all 500ms ease-in-out;
+    ${props => props.opacity && css`
+      opacity: 1;
+    `}
   `;
 
 export const MainContent = styled.main`

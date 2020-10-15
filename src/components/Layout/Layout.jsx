@@ -7,10 +7,16 @@ import Nav from "../Nav/Nav";
 
 const Layout = ({ children }) => {
 
+  const [opacity, setOpacity] = useState(false);
+
+  useEffect(() => {
+    setOpacity(true);
+  }, []);
+
   return (
     <ThemeProvider theme={Theme}>
       <GlobalStyle />
-      <PageContainer>
+      <PageContainer opacity={opacity}>
         <MainContent>
           {children}
         </MainContent>
