@@ -1,45 +1,81 @@
-import styled, { css } from "styled-components"
+import styled, { css, keyframes } from "styled-components"
 
-export const CodeContainer = styled.div`
+const revealTwo = keyframes`
+  0% {
+   left: 0;
+  }
+  
+  100% {
+    left: 100%;
+  }`
 
-align-self: flex-start;
-max-height: calc(100vh - 80px);
-color: #10D60A;
-word-wrap: break-word;
-font-size: 25px;
-overflow: hidden;
-height: 0;
-width: 0;
-position: absolute;
-left: 0;
-padding: 0;
-transition: all 6s linear 2s;
-${props => props.transition && css`
-height: 100%;
-width: 100%;
-`}
-
-> code {
-    max-height: calc(100vh - 80px);
-    max-width: 100vw;
-}
+export const BackgroundContainer = styled.code`
+  height: calc(100vh - 80px);
+  width: 80%;
+  position: absolute;
+  top: 0;
+  max-width: 1350px;
+  background-color: #070707;
+  word-break: break-all;
+  font-size: 20px;
+  color: #5ad632;
+  overflow: hidden;
 `
 
-// export const CodeInner = styled.div`
-// position: absolute;
-// left: 0;
-// transition: all 6s linear 2s;
-// max-height: calc(100vh - 80px);
-// ${props => props.transition && css`
-// height: 100%;
-// width: 100%;
-// `}`
+export const GridContainer = styled.div`
+  display: grid;
+  color: #5ad632;
+  overflow: hidden;
+  height: 100%;
+  grid-template-columns: auto;
+  position: absolute;
+  top: 0;
+  width: 80%;
+  max-width: 1350px;
 
-export const CodeOuter = styled.div`
-position: relative;
-max-width: 1800px;
-flex: 1 1 auto;
-height: calc(100vh - 80px);
-width: 100%;
-align-self: flex-start;
+  ${({ rows }) =>
+    rows &&
+    css`
+      grid-template-rows: repeat(${rows}, 20px);
+    `};
+`
+
+export const GridItem = styled.div`
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  color: #5ad632;
+  position: relative;
+`
+export const AbsoluteDiv = styled.div`
+  z-index: 9;
+  background-color: #070707;
+  top: 0;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  ${({ isWriting }) =>
+    isWriting &&
+    css`
+      animation: ${revealTwo} 0.7s linear;
+    `};
+
+  ${({ first }) =>
+    first &&
+    css`
+      animation-delay: 2s;
+    `};
+
+  ${({ doneWriting }) =>
+    doneWriting &&
+    css`
+      background: none;
+    `};
+
+  @media screen and (max-width: 600px) {
+    animation-duration: 0.4s;
+  }
 `

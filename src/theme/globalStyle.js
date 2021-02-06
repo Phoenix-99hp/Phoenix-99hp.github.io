@@ -1,5 +1,4 @@
-import { createGlobalStyle } from "styled-components";
-import Montserrat from "../fonts/Montserrat-Regular.ttf"
+import { createGlobalStyle } from "styled-components"
 
 const GlobalStyle = createGlobalStyle`
 
@@ -136,11 +135,6 @@ html,
 body {
   height: 100%;
   width: 100%;
-}
-
-@font-face {
-  font-family: Montserrat;
-  src: url(${Montserrat});
 }
 `
 
