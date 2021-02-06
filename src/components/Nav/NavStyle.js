@@ -1,11 +1,14 @@
 import styled, { css } from "styled-components"
 
 export const StyledNavContainer = styled.nav`
-  height: 80px;
-  position: fixed;
+  //   height: 100px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  height: fit-content;
+  position: relative;
   width: 100%;
   bottom: 0;
-  background-color: #070707;
+  //   background-color: #070707;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -22,12 +25,12 @@ export const StyledNavList = styled.ul`
 
   @media screen and (max-width: 600px) {
     flex-wrap: wrap;
-    padding-bottom: 40px;
+    // padding-bottom: 20px;
     // padding-top: 20px;
     ${props =>
       props.extraPadding &&
       css`
-        padding-top: 40px;
+        // padding-top: 20px;
       `}
 
     > a:nth-of-type(2) {
@@ -85,9 +88,7 @@ export const StyledNavItem = styled.li`
         props.clicked === true &&
         css`
           background: none;
-        `}// outline: none;
-        // box-shadow: none;
-        // background-image: none;;;;;;;;;
+        `}
     }
   }
 `

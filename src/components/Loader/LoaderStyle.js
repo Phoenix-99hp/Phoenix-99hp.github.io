@@ -1,4 +1,4 @@
-import styled, { keyframes } from "styled-components"
+import styled, { css, keyframes } from "styled-components"
 
 const spin = keyframes`
   from {
@@ -12,11 +12,11 @@ const spin = keyframes`
 
 const fadeIn = keyframes`
   from {
-    opacity: 0%;
+    opacity: 0;
   }
 
   to {
-    opacity: 100%;
+    opacity: 1;
   }
 `
 
@@ -31,17 +31,24 @@ export const StyledLoader = styled.div`
   margin-bottom: 20px;
 `
 
-// export const PageContainer = styled.div`
-// 	display: flex;
-// 	flex-flow: column;
-// 	min-height: 100vh;
-// 	height: 100%;
-// 	text-align: center;
-// 	width: 100vw;
-// 	align-items: center;
-// 	justify-content: center;
-// 	background-color: black;
-// `;
+export const PageContainer = styled.div`
+  opacity: 0;
+  display: flex;
+  flex-flow: column;
+  min-height: 100vh;
+  height: 100%;
+  text-align: center;
+  width: 100vw;
+  align-items: center;
+  justify-content: center;
+
+  ${({ opacity }) =>
+    opacity === "show" &&
+    css`
+      animation: ${fadeIn} 1s ease-in;
+      opacity: 1;
+    `}
+`
 
 // export const LoaderContainer = styled.div`
 // 	animation ${fadeIn} 0.2s ease-in;
@@ -61,16 +68,18 @@ export const StyledLoader = styled.div`
 // 	position: relative;
 
 export const FadeContainer = styled.div`
+  opacity: 1;
   display: flex;
-  // background-color: orange;
-  flex-flow: column;
+  background-color: #070707;
+  //   flex-flow: column;
   min-height: 100vh;
+  min-width: 100vw;
   height: 100%;
-  justify-content: center;
-  text-align: center;
-  width: 100vw;
-  align-items: center;
-  animation: ${fadeIn} 0.3s ease-in;
+  width: 100%;
+  //   justify-content: center;
+  //   text-align: center;
+  //   width: 100vw;
+  //   align-items: center;
 `
 
 export const StyledLoaderSpan = styled.span`

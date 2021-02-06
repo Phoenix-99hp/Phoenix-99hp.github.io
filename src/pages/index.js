@@ -48,29 +48,34 @@ const IndexPage = () => {
     })
 
     const height = breakpoint
-      ? window.innerHeight - 182
-      : window.innerHeight - 80
+      ? window.innerHeight - 222
+      : window.innerHeight - 114
     const rows = Math.ceil(height / 20)
     const rowsArr = []
 
     for (let i = 0; i < rows; i++) {
       rowsArr.push(i)
     }
-
-    dispatch({
-      type: "DONE_CALCULATING",
-      payload: rowsArr,
-    })
+    setTimeout(() => {
+      dispatch({
+        type: "DONE_CALCULATING",
+        payload: rowsArr,
+      })
+    }, 2000)
   }, [])
 
   return (
     <>
       {state.isCalculating ? (
-        <Loader text={"LOADING..."} />
+        <Loader text={"MAKING CALCULATIONS..."} />
       ) : !state.hasError ? (
         <Layout>
           <IndexHero />
-          <Code rowsNum={state.rowsNum} rowsArr={state.rowsArr} />
+          <Code
+            breakpoint={breakpoint}
+            rowsNum={state.rowsNum}
+            rowsArr={state.rowsArr}
+          />
         </Layout>
       ) : null}
     </>

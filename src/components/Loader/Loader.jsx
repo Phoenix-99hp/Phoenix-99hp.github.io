@@ -2,23 +2,30 @@ import React, { useEffect, useState } from "react"
 import {
   StyledLoader,
   PageContainer,
-  LoaderContainer,
   StyledLoaderSpan,
   FadeContainer,
 } from "./LoaderStyle"
+import { ThemeProvider } from "styled-components"
+import GlobalStyle from "../../theme/globalStyle"
+import Theme from "../../theme/theme"
 
 const Loader = ({ text }) => {
-  // const [opacity, setOpacity] = useState("hide");
+  const [opacity, setOpacity] = useState("hide")
 
-  // useEffect(() => {
-  // 	setOpacity("show");
-  // }, []);
+  useEffect(() => {
+    setOpacity("show")
+  }, [])
 
   return (
-    <FadeContainer>
-      <StyledLoader></StyledLoader>
-      <StyledLoaderSpan>{text}</StyledLoaderSpan>
-    </FadeContainer>
+    <ThemeProvider theme={Theme}>
+      <GlobalStyle />
+      <FadeContainer>
+        <PageContainer opacity={opacity}>
+          <StyledLoader></StyledLoader>
+          <StyledLoaderSpan>{text}</StyledLoaderSpan>
+        </PageContainer>
+      </FadeContainer>
+    </ThemeProvider>
   )
 }
 
