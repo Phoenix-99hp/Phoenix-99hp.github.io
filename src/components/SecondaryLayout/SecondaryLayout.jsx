@@ -8,19 +8,20 @@ import Theme from "../../theme/theme"
 import { ThemeProvider } from "styled-components"
 import GlobalStyle from "../../theme/globalStyle"
 import Nav from "../Nav/Nav"
+import "../../theme/globalFonts.css"
 
 const SecondaryLayout = ({ children }) => {
-  const [opacity, setOpacity] = useState("hide")
+  //   const [opacity, setOpacity] = useState("hide")
 
-  useEffect(() => {
-    setOpacity("show")
-  }, [])
+  //   useEffect(() => {
+  //     setOpacity("show")
+  //   }, [])
 
   return (
     <ThemeProvider theme={Theme}>
       <GlobalStyle />
       <FadeContainer>
-        <PageContainer opacity={opacity}>
+        <PageContainer opacity={"show"}>
           <MainContent>{children}</MainContent>
           <Nav />
         </PageContainer>
