@@ -10,7 +10,10 @@ export const StyledHero = styled.h1`
   width: fit-content;
   height: fit-content;
 
-  position: relative;
+  //   width: 100%;
+  //   height: 100%;
+
+  position: absolute;
 
   > span {
     margin-bottom: 80px;
@@ -18,6 +21,7 @@ export const StyledHero = styled.h1`
     z-index: 100;
     position: absolute;
     top: 50%;
+    // left: 50%;
     transform: translateY(-50%);
     background-color: #070707;
     padding: 20px;

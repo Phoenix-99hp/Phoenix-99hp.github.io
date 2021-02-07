@@ -46,7 +46,7 @@ export const MainContent = styled.main`
   align-items: center;
   justify-content: center;
   position: relative;
-  overflow: hidden;
+  // overflow: hidden;
   // max-height: calc(100vh - 80px);
   // max-width: 1350px;
 `

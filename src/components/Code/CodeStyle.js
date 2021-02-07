@@ -49,13 +49,18 @@ const slideUp = keyframes`
   }`
 
 export const BackgroundContainer = styled.code`
-  padding-top: 20px;
+  // border: 3px solid orange;
+  // margin-top: 20px;
+  // margin-bottom: 20px;
   // padding-bottom: 20px;
-  // max-height: calc(100vh - 114px);
+  max-height: calc(100vh - 114px);
   height: 100%;
-  width: 80%;
+  width: 100%;
   position: absolute;
   top: 0;
+  // top: 50%;
+  // translateY(-50%);
+  // z-index: 1;
   right: initial;
   max-width: 1350px;
   background-color: #070707;
@@ -66,16 +71,15 @@ export const BackgroundContainer = styled.code`
   opacity: 1;
   transition: opacity 10s, height 10s, width 10s, top 10s;
 
-  // @media screen and (max-width: 600px) {
-  //   max-height: calc(100vh - 242px);
-  // }
+  @media screen and (max-width: 600px) {
+    max-height: calc(100vh - 222px);
+  }
 
   ${({ shouldRotate }) =>
     shouldRotate &&
     css`
       animation: ${slideDown} 10s;
       opacity: 0;
-      // height: 0;
       top: -100vh;
     `};
 `
@@ -98,22 +102,43 @@ export const AnimatedCursor = styled.div`
     `}
 `
 
+export const OuterContainer = styled.div`
+  max-width: 1350px;
+  position: relative;
+  max-height: calc(100vh - 114px);
+  width: 80%;
+  @media screen and (max-width: 600px) {
+    max-height: calc(100vh - 222px);
+  }
+`
+
 export const GridContainer = styled.div`
+  // transform: translateY(-50%);
+  // top: 50%;
+  // border: 2px solid yellow;
+  // margin-top: 20px;
+  // margin-bottom: 20px;
   display: grid;
   color: #5ad632;
   // overflow: hidden;
+  max-height: calc(100vh - 114px);
   height: 100%;
   grid-template-columns: auto;
-  position: absolute;
-  top: 0;
-  width: 80%;
+  // position: absolute;
+  // top: 0;
+  width: 100%;
   max-width: 1350px;
+  position: relative;
 
   ${({ rows }) =>
     rows &&
     css`
       grid-template-rows: repeat(${rows}, 20px);
     `};
+
+  @media screen and (max-width: 600px) {
+    max-height: calc(100vh - 222px);
+  }
 `
 
 export const GridItem = styled.div`
@@ -142,7 +167,7 @@ export const AbsoluteDiv = styled.div`
   ${({ first }) =>
     first &&
     css`
-      animation-delay: 2s;
+      animation-delay: 3s;
     `};
 
   ${({ doneWriting }) =>

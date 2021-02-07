@@ -2,18 +2,20 @@ import styled, { css } from "styled-components"
 
 export const StyledNavContainer = styled.nav`
   //   height: 100px;
-  padding-top: 20px;
+  //   padding-top: 20px;
   padding-bottom: 20px;
   height: fit-content;
   position: relative;
   width: 100%;
   bottom: 0;
+  background: none;
+
   //   background-color: #070707;
   display: flex;
   justify-content: center;
   align-items: center;
   @media screen and (max-width: 600px) {
-    position: relative;
+    // position: relative;
     height: 100%;
   }
 `

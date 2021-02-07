@@ -47,10 +47,17 @@ const IndexPage = () => {
       type: "CALCULATE_ROWS",
     })
 
-    const height = breakpoint
-      ? window.innerHeight - 222
-      : window.innerHeight - 114
-    const rows = Math.ceil(height / 20)
+    console.log(window.innerHeight)
+
+    const height =
+      window.innerHeight > 1000 && !breakpoint
+        ? 1000 - 114
+        : window.innerHeight > 1000 && breakpoint
+        ? 1000 - 222
+        : breakpoint
+        ? window.innerHeight - 222
+        : window.innerHeight - 114
+    const rows = Math.floor(height / 20)
     const rowsArr = []
 
     for (let i = 0; i < rows; i++) {
