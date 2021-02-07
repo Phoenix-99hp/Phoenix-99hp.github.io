@@ -53,6 +53,7 @@ export const BackgroundContainer = styled.code`
   // margin-top: 20px;
   // margin-bottom: 20px;
   // padding-bottom: 20px;
+  // border: 2px solid yellow;
   max-height: calc(100vh - 114px);
   height: 100%;
   width: 100%;
@@ -62,7 +63,7 @@ export const BackgroundContainer = styled.code`
   // translateY(-50%);
   // z-index: 1;
   right: initial;
-  max-width: 1350px;
+  max-width: 1100px;
   background-color: #070707;
   word-break: break-all;
   font-size: 20px;
@@ -71,7 +72,7 @@ export const BackgroundContainer = styled.code`
   opacity: 1;
   transition: opacity 10s, height 10s, width 10s, top 10s;
 
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 850px) {
     max-height: calc(100vh - 222px);
   }
 
@@ -103,11 +104,12 @@ export const AnimatedCursor = styled.div`
 `
 
 export const OuterContainer = styled.div`
-  max-width: 1350px;
+  // border: 2px solid blue;
+  max-width: 1100px;
   position: relative;
   max-height: calc(100vh - 114px);
   width: 80%;
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 850px) {
     max-height: calc(100vh - 222px);
   }
 `
@@ -127,7 +129,7 @@ export const GridContainer = styled.div`
   // position: absolute;
   // top: 0;
   width: 100%;
-  max-width: 1350px;
+  max-width: 1100px;
   position: relative;
 
   ${({ rows }) =>
@@ -136,7 +138,7 @@ export const GridContainer = styled.div`
       grid-template-rows: repeat(${rows}, 20px);
     `};
 
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 850px) {
     max-height: calc(100vh - 222px);
   }
 `
@@ -176,7 +178,7 @@ export const AbsoluteDiv = styled.div`
       background: none;
     `};
 
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 850px) {
     animation-duration: 0.4s;
   }
 `

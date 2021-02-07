@@ -6,23 +6,25 @@ export const StyledHero = styled.h1`
   display: flex;
   justify-content: center;
   align-items: center;
+  position: absolute;
+  //   border: 2px solid green;
 
-  width: fit-content;
+  width: 80%;
   height: fit-content;
 
   //   width: 100%;
   //   height: 100%;
 
-  position: absolute;
+  //   position: absolute;
 
   > span {
-    margin-bottom: 80px;
+    // margin-bottom: 80px;
     border-radius: 10px;
     z-index: 100;
-    position: absolute;
-    top: 50%;
+    // position: absolute;
+    // top: 50%;
     // left: 50%;
-    transform: translateY(-50%);
+    // transform: translateY(-50%);
     background-color: #070707;
     padding: 20px;
     border: 4px solid #2bf5e9;

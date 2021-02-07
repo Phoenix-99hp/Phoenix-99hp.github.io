@@ -4,12 +4,13 @@ import {
   PageContainer,
   StyledLoaderSpan,
   FadeContainer,
+  LoaderContainer,
 } from "./LoaderStyle"
 import { ThemeProvider } from "styled-components"
 import GlobalStyle from "../../theme/globalStyle"
 import Theme from "../../theme/theme"
 
-const Loader = ({ text }) => {
+const Loader = ({ text, offset }) => {
   const [opacity, setOpacity] = useState("hide")
 
   useEffect(() => {
@@ -21,8 +22,10 @@ const Loader = ({ text }) => {
       <GlobalStyle />
       <FadeContainer>
         <PageContainer opacity={opacity}>
-          <StyledLoader></StyledLoader>
-          <StyledLoaderSpan>{text}</StyledLoaderSpan>
+          <LoaderContainer offset={offset}>
+            <StyledLoader></StyledLoader>
+            <StyledLoaderSpan>{text}</StyledLoaderSpan>
+          </LoaderContainer>
         </PageContainer>
       </FadeContainer>
     </ThemeProvider>

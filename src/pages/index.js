@@ -4,6 +4,7 @@ import IndexHero from "../components/IndexHero/IndexHero"
 import Code from "../components/Code/Code"
 import Loader from "../components/Loader/Loader"
 import { useMediaQuery } from "react-responsive"
+// import { navigate } from "gatsby"
 
 const IndexPage = () => {
   const initialState = {
@@ -40,7 +41,7 @@ const IndexPage = () => {
   }
 
   const [state, dispatch] = useReducer(reducer, initialState)
-  const breakpoint = useMediaQuery({ query: "(max-width: 600px)" })
+  const breakpoint = useMediaQuery({ query: "(max-width: 850px)" })
 
   useEffect(() => {
     dispatch({
@@ -74,7 +75,10 @@ const IndexPage = () => {
   return (
     <>
       {state.isCalculating ? (
-        <Loader text={"MAKING CALCULATIONS..."} />
+        <Loader
+          offset={breakpoint ? "202px" : "74px"}
+          text={"MAKING CALCULATIONS..."}
+        />
       ) : !state.hasError ? (
         <Layout>
           <IndexHero />

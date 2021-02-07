@@ -1,28 +1,8 @@
 import styled, { css } from "styled-components"
 
-export const StyledNavContainer = styled.nav`
-  //   height: 100px;
-  //   padding-top: 20px;
-  padding-bottom: 20px;
-  height: fit-content;
-  position: relative;
-  width: 100%;
-  bottom: 0;
-  background: none;
-
-  //   background-color: #070707;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  //   flex: 1 1 202px;
-  @media screen and (max-width: 850px) {
-    // position: relative;
-    // height: 100%;
-  }
-`
-
 export const StyledNavList = styled.ul`
   display: flex;
+  border: 5px solid blue;
   width: 80%;
   max-width: 1100px;
 
@@ -68,7 +48,7 @@ export const StyledNavList = styled.ul`
   }
 `
 
-export const StyledNavItem = styled.li`
+export const StyledNavItem = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -77,7 +57,6 @@ export const StyledNavItem = styled.li`
   z-index: 100;
   margin: 0 auto;
   color: white;
-  border: 1px solid white;
   cursor: pointer;
   border-radius: 3px;
   border: 2px solid #f834bb;

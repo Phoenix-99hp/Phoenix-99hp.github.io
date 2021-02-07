@@ -45,7 +45,7 @@ export const MainContent = styled.main`
   align-items: center;
   justify-content: center;
   padding-bottom: 80px;
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 850px) {
     padding-bottom: 40px;
   }
 `

@@ -12,7 +12,7 @@ const PortfolioSection = () => {
   return (
     <PortfolioContainer>
       <div>
-        <ProjectsTitle>Sample Projects</ProjectsTitle>
+        <ProjectsTitle>Projects</ProjectsTitle>
         <StyledDisclaimerContainer>
           <StyledDisclaimer>
             * Some projects are deployed to Heroku using the free tier and may

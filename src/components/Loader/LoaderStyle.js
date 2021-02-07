@@ -88,3 +88,10 @@ export const StyledLoaderSpan = styled.span`
   color: white;
   font-family: MontserratReg;
 `
+
+export const LoaderContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: ${({ offset }) => offset};
+`
