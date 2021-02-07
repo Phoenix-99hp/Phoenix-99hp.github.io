@@ -42,6 +42,7 @@ const IndexPage = () => {
 
   const [state, dispatch] = useReducer(reducer, initialState)
   const breakpoint = useMediaQuery({ query: "(max-width: 850px)" })
+  const landscape = useMediaQuery({ query: "(orientation: landscape)" })
 
   useEffect(() => {
     dispatch({
@@ -50,14 +51,15 @@ const IndexPage = () => {
 
     console.log(window.innerHeight)
 
-    const height =
-      window.innerHeight > 1000 && !breakpoint
-        ? 1000 - 114
-        : window.innerHeight > 1000 && breakpoint
-        ? 1000 - 222
-        : breakpoint
-        ? window.innerHeight - 222
-        : window.innerHeight - 114
+    const height = landscape
+      ? window.innerHeight - 114
+      : window.innerHeight > 1000 && !breakpoint
+      ? 1000 - 114
+      : window.innerHeight > 1000 && breakpoint
+      ? 1000 - 222
+      : breakpoint
+      ? window.innerHeight - 222
+      : window.innerHeight - 114
     const rows = Math.floor(height / 20)
     const rowsArr = []
 
@@ -76,7 +78,7 @@ const IndexPage = () => {
     <>
       {state.isCalculating ? (
         <Loader
-          offset={breakpoint ? "202px" : "74px"}
+          offset={landscape ? "74px" : breakpoint ? "222px" : "94px"}
           text={"MAKING CALCULATIONS..."}
         />
       ) : !state.hasError ? (

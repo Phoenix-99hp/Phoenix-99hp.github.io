@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react"
+import React from "react"
 import {
   StyledLoader,
   PageContainer,
@@ -12,12 +12,6 @@ import Theme from "../../theme/theme"
 import "../../theme/globalFonts.css"
 
 const Loader = ({ text, offset }) => {
-  //   const [opacity, setOpacity] = useState("hide")
-
-  //   useEffect(() => {
-  //     setOpacity("show")
-  //   }, [])
-
   return (
     <ThemeProvider theme={Theme}>
       <GlobalStyle />

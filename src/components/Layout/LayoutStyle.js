@@ -52,7 +52,7 @@ export const MainContent = styled.main`
   justify-content: center;
   position: relative;
   // overflow: hidden;
-  // max-height: calc(100vh - 80px);
+
   // max-width: 1350px;
 
   // border: 2px solid green;

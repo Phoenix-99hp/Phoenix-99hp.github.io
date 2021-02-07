@@ -66,6 +66,16 @@ export const StyledNavList = styled.ul`
       //   width: 100%;
     }
   }
+
+  @media screen and (orientation: landscape) {
+    flex-wrap: nowrap;
+    width: 80%;
+
+    > a:nth-of-type(2) {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+  }
 `
 
 export const StyledNavItem = styled.li`
@@ -112,5 +122,10 @@ export const StyledNavItem = styled.li`
           background: none;
         `}
     }
+  }
+
+  @media screen and (orientation: landscape) {
+    flex-wrap: nowrap;
+    width: 150px;
   }
 `

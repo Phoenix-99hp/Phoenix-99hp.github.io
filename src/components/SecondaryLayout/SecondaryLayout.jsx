@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react"
+import React from "react"
 import {
   MainContent,
   PageContainer,
@@ -11,12 +11,6 @@ import Nav from "../Nav/Nav"
 import "../../theme/globalFonts.css"
 
 const SecondaryLayout = ({ children }) => {
-  //   const [opacity, setOpacity] = useState("hide")
-
-  //   useEffect(() => {
-  //     setOpacity("show")
-  //   }, [])
-
   return (
     <ThemeProvider theme={Theme}>
       <GlobalStyle />

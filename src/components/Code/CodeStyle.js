@@ -18,16 +18,6 @@ const flashCursor = keyframes`
     opacity: 0;
   }`
 
-const spin = keyframes`
-  0% {
-   transform: rotate(0deg);
-  }
-
-
-  100% {
-  transform: rotate(360deg);
-  }`
-
 const slideDown = keyframes`
   0% {
    top: 0;
@@ -36,16 +26,6 @@ const slideDown = keyframes`
 
   100% {
   top: 100vh;
-  }`
-
-const slideUp = keyframes`
-  0% {
-   top: 0;
-  }
-
-
-  100% {
-  top: -100vh;
   }`
 
 export const BackgroundContainer = styled.code`
@@ -74,6 +54,11 @@ export const BackgroundContainer = styled.code`
 
   @media screen and (max-width: 850px) {
     max-height: calc(100vh - 222px);
+  }
+
+  @media screen and (orientation: landscape) {
+    max-height: calc(100vh - 114px);
+    // height: 100%;
   }
 
   ${({ shouldRotate }) =>
@@ -112,6 +97,11 @@ export const OuterContainer = styled.div`
   @media screen and (max-width: 850px) {
     max-height: calc(100vh - 222px);
   }
+
+  @media screen and (orientation: landscape) {
+    max-height: calc(100vh - 114px);
+    // height: 100%;
+  }
 `
 
 export const GridContainer = styled.div`
@@ -140,6 +130,11 @@ export const GridContainer = styled.div`
 
   @media screen and (max-width: 850px) {
     max-height: calc(100vh - 222px);
+  }
+
+  @media screen and (orientation: landscape) {
+    max-height: calc(100vh - 114px);
+    // height: 100%;
   }
 `
 

@@ -47,6 +47,14 @@ export const StyledHero = styled.h1`
       font-size: 60px;
     }
 
+    @media screen and (max-height: 900px) and (orientation: landscape) {
+      font-size: 70px;
+    }
+
+    @media screen and (max-height: 700px) and (orientation: landscape) {
+      font-size: 60px;
+    }
+
     // > h1 {
     //     width: fit-content;
     //     margin: 0 auto;
