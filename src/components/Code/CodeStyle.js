@@ -29,12 +29,6 @@ const slideDown = keyframes`
   }`
 
 export const BackgroundContainer = styled.code`
-  // border: 3px solid orange;
-  // margin-top: 20px;
-  // margin-bottom: 20px;
-  // padding-bottom: 20px;
-  // border: 2px solid yellow;
-  // background-color: yellow;
   max-height: calc(100vh - 114px);
   height: 100%;
   width: 100%;
@@ -109,12 +103,6 @@ export const OuterContainer = styled.div`
 `
 
 export const GridContainer = styled.div`
-  // transform: translateY(-50%);
-  // top: 50%;
-  // border: 2px solid yellow;
-  // margin-top: 20px;
-  // margin-bottom: 20px;
-  // background-color: red;
   display: grid;
   color: #5ad632;
   // overflow: hidden;
