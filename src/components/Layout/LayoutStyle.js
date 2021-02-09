@@ -29,7 +29,7 @@ export const PageContainer = styled.div`
 `
 
 export const FadeContainer = styled.div`
-  opacity: 1;
+  // opacity: 1;
   background-color: #070707;
   overflow: hidden;
   // display: flex;

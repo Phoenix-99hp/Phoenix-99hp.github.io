@@ -6,7 +6,7 @@ import GlobalStyle from "../../theme/globalStyle"
 import Nav from "../Nav/Nav"
 import "../../theme/globalFonts.css"
 
-const Layout = ({ children, navSpace }) => {
+const Layout = ({ children }) => {
   return (
     <ThemeProvider theme={Theme}>
       <GlobalStyle />

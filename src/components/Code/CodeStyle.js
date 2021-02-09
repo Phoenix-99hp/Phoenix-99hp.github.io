@@ -34,12 +34,8 @@ export const BackgroundContainer = styled.code`
   width: 100%;
   position: absolute;
   top: 0;
-  // top: 50%;
-  // translateY(-50%);
-  // z-index: 1;
   right: initial;
   max-width: 1100px;
-  // background-color: #070707;
   background: none;
   word-break: break-all;
   font-size: 20px;
@@ -47,6 +43,9 @@ export const BackgroundContainer = styled.code`
   overflow: hidden;
   opacity: 1;
   transition: opacity 10s, height 10s, width 10s, top 10s;
+
+  // background-color: red;
+  // z-index: 200;
 
   @media screen and (max-width: 850px) {
     max-height: calc(100vh - 222px);
@@ -85,13 +84,15 @@ export const AnimatedCursor = styled.div`
 `
 
 export const OuterContainer = styled.div`
-  // border: 2px solid blue;
   max-width: 1100px;
   background: #070707;
   position: relative;
   max-height: calc(100vh - 114px);
   width: 80%;
-  // background: none;
+
+  // background-color: red;
+  // z-index: 200;
+
   @media screen and (max-width: 850px) {
     max-height: calc(100vh - 222px);
   }
@@ -105,16 +106,16 @@ export const OuterContainer = styled.div`
 export const GridContainer = styled.div`
   display: grid;
   color: #5ad632;
-  // overflow: hidden;
   max-height: calc(100vh - 114px);
   height: 100%;
   grid-template-columns: auto;
-  // position: absolute;
-  // top: 0;
   width: 100%;
   max-width: 1100px;
   position: relative;
   background: none;
+
+  // background-color: yellow;
+  // z-index: 200;
 
   ${({ rows }) =>
     rows &&
@@ -149,16 +150,18 @@ export const AbsoluteDiv = styled.div`
   width: 100%;
   height: 100%;
 
-  ${({ isWriting }) =>
+  ${({ isWriting, first }) =>
     isWriting &&
-    css`
-      animation: ${revealTwo} 0.5s linear;
-    `};
-
-  ${({ first }) =>
     first &&
     css`
-      animation-delay: 3s;
+      animation: ${revealTwo} 0.5s linear 3s;
+    `};
+
+  ${({ isWriting, first }) =>
+    isWriting &&
+    !first &&
+    css`
+      animation: ${revealTwo} 0.5s linear;
     `};
 
   ${({ doneWriting }) =>
