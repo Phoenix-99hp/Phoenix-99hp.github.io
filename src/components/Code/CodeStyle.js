@@ -28,7 +28,7 @@ const slideDown = keyframes`
   top: 100vh;
   }`
 
-export const BackgroundContainer = styled.code`
+export const BackgroundContainer = styled.div`
   max-height: calc(100vh - 114px);
   height: 100%;
   width: 100%;
