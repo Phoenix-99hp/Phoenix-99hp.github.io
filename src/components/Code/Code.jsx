@@ -102,9 +102,9 @@ const Code = ({ rowsNum, rowsArr }) => {
                         : false
                     }
                   />
-                  {/* {row === 0 ? (
+                  {row === 0 ? (
                     <AnimatedCursor shouldFlash={state.shouldFlash} />
-                  ) : null} */}
+                  ) : null}
                 </GridItem>
               )
             })
