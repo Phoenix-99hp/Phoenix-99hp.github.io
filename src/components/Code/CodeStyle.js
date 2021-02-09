@@ -34,6 +34,7 @@ export const BackgroundContainer = styled.code`
   // margin-bottom: 20px;
   // padding-bottom: 20px;
   // border: 2px solid yellow;
+  // background-color: yellow;
   max-height: calc(100vh - 114px);
   height: 100%;
   width: 100%;
@@ -92,10 +93,11 @@ export const AnimatedCursor = styled.div`
 export const OuterContainer = styled.div`
   // border: 2px solid blue;
   max-width: 1100px;
+  background: #070707;
   position: relative;
   max-height: calc(100vh - 114px);
   width: 80%;
-  background: none;
+  // background: none;
   @media screen and (max-width: 850px) {
     max-height: calc(100vh - 222px);
   }
@@ -112,6 +114,7 @@ export const GridContainer = styled.div`
   // border: 2px solid yellow;
   // margin-top: 20px;
   // margin-bottom: 20px;
+  // background-color: red;
   display: grid;
   color: #5ad632;
   // overflow: hidden;
