@@ -110,6 +110,10 @@ export const Technical = styled.div`
 `
 
 export const StyledCheck = styled.div`
+  display: flex;
+  justify-content: center;
+  height: 25px;
+  width: 25px;
   position: absolute;
   right: 0;
   top: 50%;
