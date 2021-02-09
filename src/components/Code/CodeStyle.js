@@ -41,7 +41,7 @@ export const BackgroundContainer = styled.code`
   font-size: 20px;
   color: #5ad632;
   overflow: hidden;
-  opacity: 1;
+  // opacity: 1;
   transition: opacity 10s, height 10s, width 10s, top 10s;
 
   // background-color: red;
@@ -89,9 +89,6 @@ export const OuterContainer = styled.div`
   position: relative;
   max-height: calc(100vh - 114px);
   width: 80%;
-
-  // background-color: red;
-  // z-index: 200;
 
   @media screen and (max-width: 850px) {
     max-height: calc(100vh - 222px);

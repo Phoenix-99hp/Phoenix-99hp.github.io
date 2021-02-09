@@ -85,7 +85,7 @@ const IndexPage = () => {
         <Layout>
           <IndexHero />
           <Code
-            breakpoint={breakpoint}
+            // breakpoint={breakpoint}
             rowsNum={state.rowsNum}
             rowsArr={state.rowsArr}
           />
