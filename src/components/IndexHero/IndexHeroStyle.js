@@ -7,15 +7,9 @@ export const StyledHero = styled.h1`
   justify-content: center;
   align-items: center;
   position: absolute;
-  //   border: 2px solid green;
 
   width: 80%;
   height: fit-content;
-
-  //   width: 100%;
-  //   height: 100%;
-
-  //   position: absolute;
 
   > span {
     // margin-bottom: 80px;
@@ -28,10 +22,6 @@ export const StyledHero = styled.h1`
     background-color: #070707;
     padding: 20px;
     border: 4px solid #2bf5e9;
-    // yellow "#DFF959",
-    // pink "#F834BB",
-    // blue "#2BF5E9",
-    // pink "#D831D7"
     font-family: "Montserrat";
     // max-width: 352px;
 

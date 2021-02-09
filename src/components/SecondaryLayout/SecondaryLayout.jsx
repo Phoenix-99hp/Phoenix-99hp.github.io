@@ -4,23 +4,24 @@ import {
   PageContainer,
   FadeContainer,
 } from "./SecondaryLayoutStyle"
-import Theme from "../../theme/theme"
-import { ThemeProvider } from "styled-components"
-import GlobalStyle from "../../theme/globalStyle"
+// import Theme from "../../theme/theme"
+// import { ThemeProvider } from "styled-components"
+// import GlobalStyle from "../../theme/globalStyle"
 import Nav from "../Nav/Nav"
 import "../../theme/globalFonts.css"
+import "./SecondaryLayout.module.css"
 
 const SecondaryLayout = ({ children }) => {
   return (
-    <ThemeProvider theme={Theme}>
-      <GlobalStyle />
-      <FadeContainer>
-        <PageContainer opacity={"show"}>
-          <MainContent>{children}</MainContent>
-          <Nav />
-        </PageContainer>
-      </FadeContainer>
-    </ThemeProvider>
+    // <ThemeProvider theme={Theme}>
+    //   <GlobalStyle />
+    <FadeContainer>
+      <PageContainer opacity={"show"}>
+        <MainContent>{children}</MainContent>
+        <Nav />
+      </PageContainer>
+    </FadeContainer>
+    // </ThemeProvider>
   )
 }
 
