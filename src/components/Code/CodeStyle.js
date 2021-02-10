@@ -42,7 +42,7 @@ export const BackgroundContainer = styled.div`
   color: #5ad632;
   overflow: hidden;
   // opacity: 1;
-  transition: opacity 10s, height 10s, width 10s, top 10s;
+  transition: opacity 10s, top 10s;
 
   // background-color: red;
   // z-index: 200;
@@ -151,7 +151,7 @@ export const AbsoluteDiv = styled.div`
     isWriting &&
     first &&
     css`
-      animation: ${revealTwo} 0.5s linear 3s;
+      animation: ${revealTwo} 0.5s linear 4s;
     `};
 
   ${({ isWriting, first }) =>

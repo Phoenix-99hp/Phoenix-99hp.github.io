@@ -22,7 +22,7 @@ const fadeIn = keyframes`
 
 export const StyledLoader = styled.div`
   border-radius: 50%;
-  border: 10px solid #070707;
+  border: 10px solid transparent;
   border-bottom: 5px solid #ea42dd;
   border-top: 5px solid #ea42dd;
   height: 50px;
@@ -32,7 +32,7 @@ export const StyledLoader = styled.div`
 `
 
 export const PageContainer = styled.div`
-  opacity: 0;
+  opacity: ${({ opacity }) => opacity};
   display: flex;
   flex-flow: column;
   min-height: 100vh;
@@ -41,13 +41,7 @@ export const PageContainer = styled.div`
   width: 100vw;
   align-items: center;
   justify-content: center;
-
-  ${({ opacity }) =>
-    opacity === "show" &&
-    css`
-      animation: ${fadeIn} 1s ease-in;
-      opacity: 1;
-    `}
+  transition: opacity 1s ease-in;
 `
 
 // export const LoaderContainer = styled.div`

@@ -10,21 +10,14 @@ opacity: 1;
 }`
 
 export const PageContainer = styled.div`
-  opacity: 0;
+  opacity: ${({ opacity }) => opacity};
   display: flex;
   min-height: 100vh;
   flex-direction: column;
   display: flex;
   flex-flow: column;
   height: 100%;
-  // transition: all 500ms ease-in-out;
-
-  ${({ opacity }) =>
-    opacity === "show" &&
-    css`
-      animation: ${fadeIn} 1s ease-in;
-      opacity: 1;
-    `}
+  transition: opacity 1s ease-in;
 `
 
 export const FadeContainer = styled.div`

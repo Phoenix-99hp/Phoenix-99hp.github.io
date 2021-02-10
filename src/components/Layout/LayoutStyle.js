@@ -1,16 +1,16 @@
 import styled, { css, keyframes } from "styled-components"
 
 const fadeIn = keyframes`
-0%{ opacity: 0;
-
+0% { 
+  opacity: 0;
 }
 
-100%{
+100% {
 opacity: 1;
 }`
 
 export const PageContainer = styled.div`
-  opacity: 0;
+  opacity: ${({ opacity }) => opacity};
   display: flex;
   // min-height: 100vh;
   flex-direction: column;
@@ -19,13 +19,7 @@ export const PageContainer = styled.div`
   // height: 100%;
   height: 100vh;
   // max-height: 100vh;
-
-  ${({ opacity }) =>
-    opacity === "show" &&
-    css`
-      animation: ${fadeIn} 2s ease-in;
-      opacity: 1;
-    `}
+  transition: opacity 2s ease-in;
 `
 
 export const FadeContainer = styled.div`
