@@ -91,10 +91,6 @@ export const StyledNavItem = styled.li`
   cursor: pointer;
   border-radius: 3px;
   border: 2px solid #f834bb;
-  // yellow "#DFF959",
-  // pink "#F834BB",
-  // blue "#2BF5E9",
-  // pink "#D831D7"
   font-size: 25px;
   font-family: "Montserrat";
   outline: none;
