@@ -29,6 +29,7 @@ const slideDown = keyframes`
   }`
 
 export const BackgroundContainer = styled.div`
+  box-sizing: content-box;
   max-height: calc(100vh - 114px);
   height: 100%;
   width: 100%;
@@ -43,6 +44,8 @@ export const BackgroundContainer = styled.div`
   overflow: hidden;
   // opacity: 1;
   transition: opacity 10s, top 10s;
+  padding-left: 1px;
+  padding-right: 1px;
 
   // background-color: red;
   // z-index: 200;
@@ -137,6 +140,10 @@ export const GridItem = styled.div`
   left: 0;
   color: #5ad632;
   position: relative;
+  padding-top: 1px;
+  padding-bottom: 1px;
+  padding-left: 1px;
+  padding-right: 1px;
 `
 export const AbsoluteDiv = styled.div`
   z-index: 9;
@@ -146,6 +153,8 @@ export const AbsoluteDiv = styled.div`
   left: 0;
   width: 100%;
   height: 100%;
+  padding-left: 1px;
+  padding-right: 1px;
 
   ${({ isWriting, first }) =>
     isWriting &&

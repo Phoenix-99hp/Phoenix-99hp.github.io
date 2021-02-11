@@ -82,6 +82,7 @@ const Code = ({ rowsNum, rowsArr }) => {
                 <GridItem key={row}>
                   <AbsoluteDiv
                     first={row === 0 ? true : false}
+                    // last={row === state.rows.length - 1 ? true : false}
                     key={row}
                     isWriting={state.assignRef === row ? true : false}
                     onAnimationEnd={() => handleAnimationEnd()}

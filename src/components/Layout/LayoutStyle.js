@@ -11,6 +11,7 @@ opacity: 1;
 
 export const PageContainer = styled.div`
   opacity: ${({ opacity }) => opacity};
+  background-color: #070707;
   display: flex;
   // min-height: 100vh;
   flex-direction: column;
