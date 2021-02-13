@@ -70,7 +70,7 @@ export const BackgroundContainer = styled.div`
 export const AnimatedCursor = styled.div`
   position: absolute;
   z-index: 10;
-  background-color: #f834bb;
+  background-color: #dff959;
   top: 0;
   left: 0;
   width: 10px;

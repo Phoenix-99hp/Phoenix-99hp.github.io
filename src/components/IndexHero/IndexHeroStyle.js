@@ -21,7 +21,7 @@ export const StyledHero = styled.h1`
     // transform: translateY(-50%);
     background-color: #070707;
     padding: 20px;
-    border: 4px solid #2bf5e9;
+    // border: 4px solid #2bf5e9;
     font-family: "Montserrat";
     // max-width: 352px;
 
@@ -35,6 +35,7 @@ export const StyledHero = styled.h1`
 
     @media screen and (max-width: 300px) {
       font-size: 60px;
+      padding: 10px;
     }
 
     @media screen and (max-height: 420px) {
