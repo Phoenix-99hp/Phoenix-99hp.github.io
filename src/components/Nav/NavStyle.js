@@ -87,10 +87,9 @@ export const StyledNavItem = styled.li`
   z-index: 100;
   margin: 0 auto;
   color: white;
-  border: 1px solid white;
   cursor: pointer;
   border-radius: 3px;
-  border: 2px solid #f834bb;
+  border: 2px solid #dff959;
   font-size: 25px;
   font-family: "Montserrat";
   outline: none;
@@ -99,7 +98,8 @@ export const StyledNavItem = styled.li`
   ${props =>
     props.selected === true &&
     css`
-      background-color: #f834bb;
+      background-color: #dff959;
+      color: black;
     `}
   @media screen and (max-width: 850px) {
     width: 100%;
@@ -107,7 +107,8 @@ export const StyledNavItem = styled.li`
   }
 
   &:hover {
-    background-color: #f834bb;
+    background-color: #dff959;
+    color: black;
   }
 
   @media (-moz-touch-enabled: 1), (pointer: coarse) {

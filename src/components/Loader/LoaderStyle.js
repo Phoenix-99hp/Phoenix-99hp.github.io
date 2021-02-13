@@ -23,8 +23,8 @@ const fadeIn = keyframes`
 export const StyledLoader = styled.div`
   border-radius: 50%;
   border: 10px solid transparent;
-  border-bottom: 5px solid #ea42dd;
-  border-top: 5px solid #ea42dd;
+  border-bottom: 5px solid #dff959;
+  border-top: 5px solid #dff959;
   height: 50px;
   width: 50px;
   animation: ${spin} 1s linear infinite;
