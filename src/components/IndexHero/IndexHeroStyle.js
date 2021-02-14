@@ -12,8 +12,9 @@ export const StyledHero = styled.h1`
   height: fit-content;
 
   > span {
+    opacity: 0.7;
     // margin-bottom: 80px;
-    border-radius: 10px;
+    border-radius: 3px;
     z-index: 100;
     // position: absolute;
     // top: 50%;
@@ -26,6 +27,7 @@ export const StyledHero = styled.h1`
     // border: 4px solid #2bf5e9;
     font-family: "Montserrat";
     font-weight: bold;
+
     // max-width: 352px;
 
     @media screen and (max-width: 600px) {
@@ -38,7 +40,6 @@ export const StyledHero = styled.h1`
 
     @media screen and (max-width: 300px) {
       font-size: 60px;
-      // padding: 10px;
     }
 
     @media screen and (max-height: 420px) {

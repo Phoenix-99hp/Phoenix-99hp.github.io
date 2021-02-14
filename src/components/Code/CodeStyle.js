@@ -29,7 +29,7 @@ const slideDown = keyframes`
   }`
 
 export const BackgroundContainer = styled.code`
-  box-sizing: content-box;
+  box-sizing: border-box;
   max-height: calc(100vh - 114px);
   height: 100%;
   width: 100%;
@@ -40,6 +40,7 @@ export const BackgroundContainer = styled.code`
   background: none;
   word-break: break-all;
   font-size: 20px;
+  // line-height: 20px;
   // color: red;
 
   // color: #5ad632;
@@ -54,7 +55,7 @@ export const BackgroundContainer = styled.code`
   // z-index: 200;
 
   @media screen and (max-width: 850px) {
-    max-height: calc(100vh - 222px);
+    max-height: calc(100vh - 242px);
   }
 
   @media screen and (orientation: landscape) {
@@ -74,6 +75,7 @@ export const AnimatedCursor = styled.div`
   position: absolute;
   z-index: 10;
   background-color: #dff959;
+  // background-color: #f834bb;
   top: 0;
   left: 0;
   width: 10px;
@@ -97,27 +99,17 @@ export const OuterContainer = styled.div`
   width: 80%;
 
   @media screen and (max-width: 850px) {
-    max-height: calc(100vh - 222px);
+    max-height: calc(100vh - 242px);
   }
 
   @media screen and (orientation: landscape) {
     max-height: calc(100vh - 114px);
     // height: 100%;
   }
-
-  // > pre {
-  //   min-height: calc(100vh - 114px);
-  //   height: 100%;
-  //   width: 100%;
-  //   position: relative;
-  //   max-width: 1100px;
-  //   word-break: break-all;
-  // }
 `
 
 export const GridContainer = styled.div`
   display: grid;
-  // color: #5ad632;
   max-height: calc(100vh - 114px);
   height: 100%;
   grid-template-columns: auto;
@@ -126,9 +118,6 @@ export const GridContainer = styled.div`
   position: relative;
   background: none;
 
-  // background-color: yellow;
-  // z-index: 200;
-
   ${({ rows }) =>
     rows &&
     css`
@@ -136,7 +125,7 @@ export const GridContainer = styled.div`
     `};
 
   @media screen and (max-width: 850px) {
-    max-height: calc(100vh - 222px);
+    max-height: calc(100vh - 242px);
   }
 
   @media screen and (orientation: landscape) {
@@ -165,8 +154,8 @@ export const AbsoluteDiv = styled.div`
   left: 0;
   width: 100%;
   height: 100%;
-  padding-left: 1px;
-  padding-right: 1px;
+  // padding-left: 1px;
+  // padding-right: 1px;
 
   ${({ isWriting, first }) =>
     isWriting &&

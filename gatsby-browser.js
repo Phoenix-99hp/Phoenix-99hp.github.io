@@ -3,4 +3,5 @@
  *
  * See: https://www.gatsbyjs.com/docs/browser-apis/
  */
-require("prismjs/themes/prism-twilight.css")
+
+// require("./src/theme/prismTheme.css")

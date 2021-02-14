@@ -134,3 +134,15 @@ body {
   height: 100%;
   width: 100%;
 }
+
+code[class*="language-"],
+pre[class*="language-"] {
+  color: #a8ffef;
+  background: none;
+  /* text-shadow: 0 1px rgba(0, 0, 0, 0.3); */
+  font-family: Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+  font-size: 20px;
+  text-align: left;
+  word-break: break-all;
+  word-wrap: break-word;
+}

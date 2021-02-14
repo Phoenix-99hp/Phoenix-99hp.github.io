@@ -4,6 +4,7 @@ import IndexHero from "../components/IndexHero/IndexHero"
 import Code from "../components/Code/Code"
 import Loader from "../components/Loader/Loader"
 import { useMediaQuery } from "react-responsive"
+// import Prism from "prismjs"
 // import { navigate } from "gatsby"
 
 const IndexPage = () => {
@@ -56,9 +57,9 @@ const IndexPage = () => {
       : window.innerHeight > 1000 && !breakpoint
       ? 1000 - 114
       : window.innerHeight > 1000 && breakpoint
-      ? 1000 - 222
+      ? 1000 - 242
       : breakpoint
-      ? window.innerHeight - 222
+      ? window.innerHeight - 242
       : window.innerHeight - 114
     const rows = Math.floor(height / 20)
     const rowsArr = []
