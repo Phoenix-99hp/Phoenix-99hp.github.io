@@ -10,7 +10,7 @@ export const SectionContainer = styled.div`
   @media screen and (max-width: 760px) {
     flex-wrap: wrap;
     padding-bottom: 0;
-    // padding-top: 40px;
+    padding-top: 40px;
   } ;
 `
 

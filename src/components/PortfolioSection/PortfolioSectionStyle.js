@@ -8,7 +8,7 @@ export const PortfolioContainer = styled.div`
   align-self: center;
   justify-content: center;
   align-items: center;
-  padding-top: 20px;
+  padding-top: 40px;
   padding-bottom: 40px;
   font-family: "Montserrat";
   flex-wrap: wrap;
