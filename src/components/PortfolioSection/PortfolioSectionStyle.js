@@ -12,9 +12,9 @@ export const PortfolioContainer = styled.div`
   padding-bottom: 40px;
   font-family: "Montserrat";
   flex-wrap: wrap;
-  @media screen and (max-width: 850px) {
-    padding-bottom: 0;
-  }
+  // @media screen and (max-width: 850px) {
+  //   padding-bottom: 0;
+  // }
 
   > div {
     align-self: flex-start;
@@ -30,7 +30,8 @@ export const PortfolioProject = styled.div`
   margin: 0 auto;
   text-align: center;
   padding: 20px;
-  border: 3px solid #2bf5e9;
+  // border: 3px solid #2bf5e9;
+  border: 3px solid white;
   margin-bottom: 20px;
   border-radius: 10px;
   flex: 1 1 100%;

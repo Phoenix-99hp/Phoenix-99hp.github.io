@@ -37,8 +37,8 @@ export const MainContent = styled.main`
   flex: 1 1 auto;
   align-items: center;
   justify-content: center;
-  padding-bottom: 80px;
-  @media screen and (max-width: 850px) {
-    padding-bottom: 40px;
-  }
+  // padding-bottom: 80px;
+  // @media screen and (max-width: 850px) {
+  //   padding-bottom: 40px;
+  // }
 `

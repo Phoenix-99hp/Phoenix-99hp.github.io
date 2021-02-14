@@ -22,7 +22,9 @@ const fadeIn = keyframes`
 
 export const StyledLoader = styled.div`
   border-radius: 50%;
-  border: 10px solid transparent;
+  border: 5px solid transparent;
+  // border-bottom: 5px solid #dff959;
+  // border-top: 5px solid #dff959;
   border-bottom: 5px solid #dff959;
   border-top: 5px solid #dff959;
   height: 50px;
