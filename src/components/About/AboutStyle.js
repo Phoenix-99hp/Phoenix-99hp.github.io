@@ -3,7 +3,7 @@ import LazyLoad from "react-lazy-load"
 
 export const SectionContainer = styled.div`
   display: flex;
-  padding: 20px;
+  padding: 20px 20px 40px 20px;
   font-family: "Montserrat";
   max-width: 1350px;
   @media screen and (max-width: 760px) {
@@ -66,12 +66,12 @@ export const Technical = styled.div`
   @media screen and (max-width: 600px) {
     flex: 1 1 100%;
     padding-top: 40px;
-    padding-bottom: 0;
+    // padding-bottom: 0;
   }
 
   > ul > li {
     font-size: 25px;
-    padding-bottom: 15px;
+    margin-bottom: 15px;
     position: relative;
     font-weight: normal;
   }
