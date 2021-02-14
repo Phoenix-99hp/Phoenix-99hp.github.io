@@ -40,8 +40,11 @@ export const BackgroundContainer = styled.code`
   background: none;
   word-break: break-all;
   font-size: 20px;
-  color: #5ad632;
+  // color: red;
+
+  // color: #5ad632;
   overflow: hidden;
+
   // opacity: 1;
   transition: opacity 10s, top 10s;
   padding-left: 1px;
@@ -101,11 +104,20 @@ export const OuterContainer = styled.div`
     max-height: calc(100vh - 114px);
     // height: 100%;
   }
+
+  // > pre {
+  //   min-height: calc(100vh - 114px);
+  //   height: 100%;
+  //   width: 100%;
+  //   position: relative;
+  //   max-width: 1100px;
+  //   word-break: break-all;
+  // }
 `
 
 export const GridContainer = styled.div`
   display: grid;
-  color: #5ad632;
+  // color: #5ad632;
   max-height: calc(100vh - 114px);
   height: 100%;
   grid-template-columns: auto;
@@ -138,7 +150,7 @@ export const GridItem = styled.div`
   height: 100%;
   width: 100%;
   left: 0;
-  color: #5ad632;
+  // color: #5ad632;
   position: relative;
   padding-top: 1px;
   padding-bottom: 1px;
