@@ -26,8 +26,8 @@ const AboutSection = () => {
           <AboutCopy>
             Hi, I'm Drake McGarrah. I am a full-stack web developer primarily
             experienced with the MERN (MongoDB, Express, React, Node.js) stack.
-            For me it's all about the code - I enjoy taking people's designs and
-            web page ideas and turning them into reality.
+            I enjoy taking people's designs and web page ideas and turning them
+            into reality.
           </AboutCopy>
         </AboutCopyContainer>
       </AboutContainer>

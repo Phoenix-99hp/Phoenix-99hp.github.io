@@ -8,7 +8,7 @@ export const PortfolioContainer = styled.div`
   align-self: center;
   justify-content: center;
   align-items: center;
-  padding-top: 40px;
+  padding-top: 20px;
   padding-bottom: 40px;
   font-family: "Montserrat";
   flex-wrap: wrap;
@@ -26,21 +26,24 @@ export const PortfolioContainer = styled.div`
 
 export const PortfolioProject = styled.div`
   color: white;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
   max-width: 300px;
+  width: 100%;
+  border-bottom: 2px solid white;
   margin: 0 auto;
   text-align: center;
   padding: 20px;
-  // border: 3px solid #2bf5e9;
-  border: 3px solid white;
-  margin-bottom: 20px;
   border-radius: 10px;
   flex: 1 1 100%;
 
-  &:last-of-type {
-    margin-bottom: 0;
+  &:nth-of-type(2) {
+    padding-top: 0;
   }
 
   > a {
+    flex: 1 1 100%;
     display: block;
     color: #f834bb;
     cursor: pointer;
@@ -61,14 +64,40 @@ export const PortfolioProject = styled.div`
     padding: 10px 0;
   }
 
+  > a:nth-of-type(2) {
+    padding: 0 0 10px;
+  }
+
+  > h4 {
+    flex: 1 1 100%;
+    color: #dff959;
+    padding-bottom: 10px;
+  }
+
+  > ul {
+    width: 100%;
+    list-style-type: circle;
+    text-align: left;
+  }
+
+  > ul > li {
+    text-align: left;
+    padding-bottom: 5px;
+
+    :last-of-type {
+      padding-bottom: 0;
+    }
+  }
+
   > h1 {
+    flex: 1 1 100%;
     font-size: 30px;
     font-family: "Montserrat";
   }
 
   @media screen and (max-width: 500px) {
     box-sizing: border-box;
-    max-width: 260px;
+    // max-width: 260px;
   }
 `
 
@@ -80,17 +109,25 @@ export const ProjectsTitle = styled.h1`
   margin: 0 auto;
   margin-bottom: 40px;
   font-weight: bold;
-  // margin-top: 40px;
   padding-bottom: 5px;
   font-family: "Montserrat";
-  border-bottom: 3px solid #dff959;
+  // border-bottom: 3px solid #dff959;
+
+  opacity: 0.7;
+  border-radius: 3px;
+  background-color: white;
+  color: black;
+  padding: 20px;
+  font-family: "Montserrat";
+  font-weight: bold;
+
   @media screen and (max-width: 430px) {
     font-size: 40px;
   }
 `
 
 export const StyledDisclaimerContainer = styled.div`
-  max-width: 300px;
+  // max-width: 300px;
   margin: 0 auto;
   margin-bottom: 40px;
 `

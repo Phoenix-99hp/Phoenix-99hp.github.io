@@ -15,8 +15,8 @@ const PortfolioSection = () => {
         <ProjectsTitle>Projects</ProjectsTitle>
         <StyledDisclaimerContainer>
           <StyledDisclaimer>
-            * Some projects are deployed to Heroku using the free tier and may
-            take some time to initially load.
+            * Denotes a project that is deployed to Heroku using the free tier,
+            so it may take some time to initially load.
           </StyledDisclaimer>
         </StyledDisclaimerContainer>
         <PortfolioProject>
@@ -35,6 +35,12 @@ const PortfolioSection = () => {
           >
             <span>Deployed</span>
           </a>
+          <h4>Skills Demonstrated:</h4>
+          <ul>
+            <li>Complex front-end logic</li>
+            <li>Vanilla JS</li>
+            <li>Webpack</li>
+          </ul>
         </PortfolioProject>
         <PortfolioProject>
           <h1>Clubhouse</h1>
@@ -52,6 +58,14 @@ const PortfolioSection = () => {
           >
             <Asterisk>*</Asterisk> <span>Deployed</span>
           </a>
+          <h4>Skills Demonstrated:</h4>
+          <ul>
+            <li>User Authentication</li>
+            <li>Session Storage</li>
+            <li>Gatsby JS</li>
+            <li>Node JS</li>
+            <li>Express</li>
+          </ul>
         </PortfolioProject>
         <PortfolioProject>
           <h1>Inventory</h1>
@@ -69,6 +83,15 @@ const PortfolioSection = () => {
           >
             <Asterisk>*</Asterisk> <span>Deployed</span>
           </a>
+          <h4>Skills Demonstrated:</h4>
+          <ul>
+            <li>Handlebars</li>
+            <li>RegEx validation</li>
+            <li>MongoDB</li>
+            <li>Mongoose</li>
+            <li>Node JS</li>
+            <li>Express</li>
+          </ul>
         </PortfolioProject>
         <PortfolioProject>
           <h1>Matching Game</h1>
@@ -86,6 +109,12 @@ const PortfolioSection = () => {
           >
             <span>Deployed</span>
           </a>
+          <h4>Skills Demonstrated:</h4>
+          <ul>
+            <li>React</li>
+            <li>styled-components</li>
+            <li>Front-end logic</li>
+          </ul>
         </PortfolioProject>
         <PortfolioProject>
           <h1>Odin-Book</h1>
@@ -103,6 +132,18 @@ const PortfolioSection = () => {
           >
             <Asterisk>*</Asterisk> <span>Deployed</span>
           </a>
+          <h4>Skills Demonstrated:</h4>
+          <ul>
+            <li>React</li>
+            <li>User Authentication</li>
+            <li>Session Storage</li>
+            <li>CSS modules</li>
+            <li>REST api</li>
+            <li>Redux</li>
+            <li>Complex back-end query execution</li>
+            <li>Node JS</li>
+            <li>Express</li>
+          </ul>
         </PortfolioProject>
         <PortfolioProject>
           <h1>Todo List</h1>
@@ -120,6 +161,11 @@ const PortfolioSection = () => {
           >
             <span>Deployed</span>
           </a>
+          <h4>Skills Demonstrated:</h4>
+          <ul>
+            <li>Capturing user input</li>
+            <li>Local Storage</li>
+          </ul>
         </PortfolioProject>
       </div>
     </PortfolioContainer>

@@ -82,7 +82,8 @@ export const StyledLoaderSpan = styled.span`
   width: 100%;
   text-align: center;
   color: white;
-  font-family: MontserratReg;
+  font-family: Montserrat;
+  opacity: 0.7;
 `
 
 export const LoaderContainer = styled.div`

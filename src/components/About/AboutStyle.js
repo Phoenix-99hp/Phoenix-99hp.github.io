@@ -3,13 +3,14 @@ import LazyLoad from "react-lazy-load"
 
 export const SectionContainer = styled.div`
   display: flex;
-  padding: 20px 20px 40px 20px;
+  // padding: 20px 20px 40px 20px;
+  padding: 20px;
   font-family: "Montserrat";
   max-width: 1350px;
   @media screen and (max-width: 760px) {
     flex-wrap: wrap;
     padding-bottom: 0;
-    padding-top: 40px;
+    // padding-top: 40px;
   } ;
 `
 
@@ -55,8 +56,16 @@ export const StyledLazyLoad = styled(LazyLoad)`
 export const Technical = styled.div`
   flex: 0 1 50%;
   color: white;
+
+  // opacity: 0.7;
+  // border-radius: 3px;
+  // background-color: white;
+  // color: black;
+  // padding: 20px;
+  // font-family: "Montserrat";
+  // font-weight: bold;
+
   align-self: center;
-  // padding-bottom: 40px;
   font-weight: bold;
   @media screen and (max-width: 760px) {
     flex: 1 1 100%;
@@ -66,7 +75,6 @@ export const Technical = styled.div`
   @media screen and (max-width: 600px) {
     flex: 1 1 100%;
     padding-top: 40px;
-    // padding-bottom: 0;
   }
 
   > ul > li {
@@ -97,12 +105,20 @@ export const Technical = styled.div`
   > h1 {
     font-size: 50px;
     text-align: center;
-    padding-bottom: 5px;
+    // padding-bottom: 5px;
     margin: 0 auto;
     margin-bottom: 35px;
-    border-bottom: 3px solid #dff959;
+    // border-bottom: 3px solid #dff959;
     width: fit-content;
+
+    opacity: 0.7;
+    border-radius: 3px;
+    background-color: white;
+    color: black;
+    padding: 20px;
     font-family: "Montserrat";
+    font-weight: bold;
+
     @media screen and (max-width: 835px) {
       font-size: 40px;
     }
