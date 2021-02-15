@@ -78,7 +78,7 @@ const IndexPage = () => {
       {state.isCalculating ? (
         <Loader
           // offset={landscape ? "0px" : breakpoint ? "222px" : "94px"}
-          offset={breakpoint && landscape ? "0" : breakpoint ? "202px" : "0"}
+          offset={breakpoint && landscape ? "0" : breakpoint ? "242px" : "0"}
           text={"MAKING CALCULATIONS..."}
         />
       ) : !state.hasError ? (
