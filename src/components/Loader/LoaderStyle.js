@@ -88,5 +88,13 @@ export const LoaderContainer = styled.div`
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  margin-bottom: ${({ offset }) => offset};
+  margin-bottom: 94px;
+
+  @media screen and (max-width: 850px) and (orientation: portrait) {
+    margin-bottom: 202px;
+  }
+
+  @media screen and (max-width: 850px) and (orientation: landscape) {
+    margin-bottom: 0;
+  }
 `
