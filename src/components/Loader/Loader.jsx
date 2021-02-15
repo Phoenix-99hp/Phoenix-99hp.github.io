@@ -6,10 +6,6 @@ import {
   FadeContainer,
   LoaderContainer,
 } from "./LoaderStyle"
-// import { ThemeProvider } from "styled-components"
-// import GlobalStyle from "../../theme/globalStyle"
-// import Theme from "../../theme/theme"
-// import "../../theme/globalFonts.css"
 import "./Loader.module.css"
 
 const Loader = ({ text, offset }) => {

@@ -4,8 +4,6 @@ import IndexHero from "../components/IndexHero/IndexHero"
 import Code from "../components/Code/Code"
 import Loader from "../components/Loader/Loader"
 import { useMediaQuery } from "react-responsive"
-// import Prism from "prismjs"
-// import { navigate } from "gatsby"
 
 const IndexPage = () => {
   const initialState = {
@@ -79,7 +77,10 @@ const IndexPage = () => {
     <>
       {state.isCalculating ? (
         <Loader
-          offset={landscape ? "0px" : breakpoint ? "222px" : "94px"}
+          // offset={landscape ? "0px" : breakpoint ? "222px" : "94px"}
+          offset={
+            breakpoint && landscape ? "0" : breakpoint ? "242px" : "114px"
+          }
           text={"MAKING CALCULATIONS..."}
         />
       ) : !state.hasError ? (

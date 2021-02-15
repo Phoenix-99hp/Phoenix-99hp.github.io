@@ -94,13 +94,23 @@ export const StyledNavItem = styled.li`
   font-family: "Montserrat";
   outline: none;
   box-shadow: none;
-  background-image: none;
+  // background-image: none;
+
+  // &:nth-of-type(2) {
+  //   border-color: #2bf5e9;
+  // }
+
+  // &:nth-of-type(3) {
+  //   border-color: #f834bb;
+  // }
+
   ${props =>
     props.selected === true &&
     css`
       background-color: #dff959;
       color: black;
     `}
+
   @media screen and (max-width: 850px) {
     width: 100%;
     // margin: 10px 0;

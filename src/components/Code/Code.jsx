@@ -6,6 +6,7 @@ import {
   AbsoluteDiv,
   AnimatedCursor,
   OuterContainer,
+  InnerContainer,
 } from "./CodeStyle"
 import Prism from "prismjs"
 import "../../theme/prismTheme.css"
@@ -73,6 +74,7 @@ const Code = ({ rowsNum, rowsArr }) => {
 
   return (
     <OuterContainer>
+      {/* <InnerContainer> */}
       {/* <pre> */}
       <BackgroundContainer
         className={"language-javascript"}
@@ -115,6 +117,7 @@ const Code = ({ rowsNum, rowsArr }) => {
             })
           : null}
       </GridContainer>
+      {/* </InnerContainer> */}
     </OuterContainer>
   )
 }

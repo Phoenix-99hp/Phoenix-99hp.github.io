@@ -96,6 +96,11 @@ export const OuterContainer = styled.div`
   background: #070707;
   position: relative;
   max-height: calc(100vh - 114px);
+
+  // height: 100%;
+  // display: flex;
+  // align-items: center;
+
   width: 80%;
 
   @media screen and (max-width: 850px) {
@@ -104,9 +109,30 @@ export const OuterContainer = styled.div`
 
   @media screen and (orientation: landscape) {
     max-height: calc(100vh - 114px);
-    // height: 100%;
   }
 `
+
+// export const InnerContainer = styled.div`
+//   max-width: 1100px;
+//   background: #070707;
+//   position: relative;
+//   max-height: calc(100vh - 114px);
+//   border: 2px solid red;
+
+//   height: 100%;
+//   // display: flex;
+//   // align-items: center;
+
+//   width: 100%;
+
+//   @media screen and (max-width: 850px) {
+//     max-height: calc(100vh - 242px);
+//   }
+
+//   @media screen and (orientation: landscape) {
+//     max-height: calc(100vh - 114px);
+//   }
+// `
 
 export const GridContainer = styled.div`
   display: grid;
@@ -130,7 +156,6 @@ export const GridContainer = styled.div`
 
   @media screen and (orientation: landscape) {
     max-height: calc(100vh - 114px);
-    // height: 100%;
   }
 `
 
