@@ -43,6 +43,33 @@ const PortfolioSection = () => {
           </ul>
         </PortfolioProject>
         <PortfolioProject>
+          <h1>Blog</h1>
+          <a
+            href={"https://github.com/Phoenix-99hp/contentful-blog"}
+            target="_blank"
+            rel={"noopener noreferrer"}
+          >
+            <span>GitHub Code</span>
+          </a>
+          <a
+            href={"https://calm-mountain-77192.herokuapp.com/"}
+            target="_blank"
+            rel={"noopener noreferrer"}
+          >
+            <Asterisk>*</Asterisk> <span>Deployed</span>
+          </a>
+          <h4>Skills Demonstrated:</h4>
+          <ul>
+            <li>Contentful CMS integration</li>
+            <li>Sliding carousel</li>
+            <li>Dropdown menu</li>
+            <li>React</li>
+            <li>Node JS</li>
+            <li>Express</li>
+            <li>Webpack</li>
+          </ul>
+        </PortfolioProject>
+        <PortfolioProject>
           <h1>Clubhouse</h1>
           <a
             href={"https://github.com/Phoenix-99hp/gatsby-clubhouse"}
@@ -145,7 +172,7 @@ const PortfolioSection = () => {
             <li>Express</li>
           </ul>
         </PortfolioProject>
-        <PortfolioProject>
+        {/* <PortfolioProject>
           <h1>Todo List</h1>
           <a
             href={"https://github.com/Phoenix-99hp/Todo-List"}
@@ -166,7 +193,7 @@ const PortfolioSection = () => {
             <li>Capturing user input</li>
             <li>Local Storage</li>
           </ul>
-        </PortfolioProject>
+        </PortfolioProject> */}
       </div>
     </PortfolioContainer>
   )
