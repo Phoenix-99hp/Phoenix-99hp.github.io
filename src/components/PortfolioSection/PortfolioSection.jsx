@@ -42,7 +42,7 @@ const PortfolioSection = () => {
             <li>Webpack</li>
           </ul>
         </PortfolioProject>
-        <PortfolioProject>
+        {/* <PortfolioProject>
           <h1>Blog</h1>
           <a
             href={"https://github.com/Phoenix-99hp/contentful-blog"}
@@ -68,7 +68,7 @@ const PortfolioSection = () => {
             <li>Express</li>
             <li>Webpack</li>
           </ul>
-        </PortfolioProject>
+        </PortfolioProject> */}
         <PortfolioProject>
           <h1>Clubhouse</h1>
           <a
