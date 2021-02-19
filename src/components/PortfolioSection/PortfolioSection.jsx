@@ -143,7 +143,7 @@ const PortfolioSection = () => {
             <li>Front-end logic</li>
           </ul>
         </PortfolioProject>
-        <PortfolioProject>
+        {/* <PortfolioProject>
           <h1>Odin-Book</h1>
           <a
             href={"https://github.com/Phoenix-99hp/odin-book-v2"}
@@ -171,7 +171,7 @@ const PortfolioSection = () => {
             <li>Node JS</li>
             <li>Express</li>
           </ul>
-        </PortfolioProject>
+        </PortfolioProject> */}
         {/* <PortfolioProject>
           <h1>Todo List</h1>
           <a

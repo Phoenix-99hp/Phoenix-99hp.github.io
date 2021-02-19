@@ -13,22 +13,16 @@ export const StyledHero = styled.h1`
 
   > span {
     opacity: 0.7;
-    // margin-bottom: 80px;
+
     border-radius: 3px;
     z-index: 100;
-    // position: absolute;
-    // top: 50%;
-    // left: 50%;
-    // transform: translateY(-50%);
-    // background-color: #070707;
+
     background-color: white;
     color: black;
     padding: 20px;
     // border: 4px solid #2bf5e9;
     font-family: "Montserrat";
     font-weight: bold;
-
-    // max-width: 352px;
 
     @media screen and (max-width: 600px) {
       margin-bottom: 0;
