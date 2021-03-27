@@ -143,3 +143,7 @@ export const Asterisk = styled.span`
   pointer-events: none;
   cursor: default;
 `
+
+export const SubHeading = styled.span`
+  padding-top: 5px;
+`

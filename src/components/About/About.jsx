@@ -32,7 +32,7 @@ const AboutSection = () => {
         </AboutCopyContainer>
       </AboutContainer>
       <Technical>
-        <h1>Technical Specs</h1>
+        <h1>Relevant Skills</h1>
         <ul>
           <li>
             HTML<StyledCheck>&#x2705;</StyledCheck>
@@ -78,6 +78,13 @@ const AboutSection = () => {
           </li>
           <li>
             PHP
+            <StyledYellow />
+            {/* <span>
+              <div></div>
+            </span> */}
+          </li>
+          <li>
+            Ruby on Rails
             <StyledYellow />
             {/* <span>
               <div></div>

@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import { StyledNavContainer, StyledNavItem, StyledNavList } from "./NavStyle"
 import { Link } from "gatsby"
-import Resume from "../../images/Resume.pdf"
+import Resume from "../../images/DM-Resume.pdf"
 
 const Nav = () => {
   const [clicked, setClicked] = useState(false)

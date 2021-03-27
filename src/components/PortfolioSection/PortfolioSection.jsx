@@ -6,7 +6,9 @@ import {
   StyledDisclaimer,
   PortfolioProject,
   ProjectsTitle,
+  SubHeading
 } from "./PortfolioSectionStyle"
+import mcjIMG from "../../images/mc-j-tablet-mobile-carousel.png"
 
 const PortfolioSection = () => {
   return (
@@ -141,6 +143,28 @@ const PortfolioSection = () => {
             <li>React</li>
             <li>styled-components</li>
             <li>Front-end logic</li>
+          </ul>
+        </PortfolioProject>
+        <PortfolioProject>
+          <h1>Mc-J Carousel</h1>
+          <SubHeading>(Tablet and Mobile Views)</SubHeading>
+          <a
+            href={"https://www.mcj.co"}
+            target="_blank"
+            rel={"noopener noreferrer"}
+          >
+          <span>Full site</span>
+          </a>
+          <a
+            href={mcjIMG}
+            target="_blank"
+            rel={"noopener noreferrer"}
+          >
+          <span>Carousel</span>
+          </a>
+          <h4>Skills Demonstrated:</h4>
+          <ul>
+            <li>Ability to create isolated components consistent with the existing design framework of a site</li>
           </ul>
         </PortfolioProject>
         {/* <PortfolioProject>
