@@ -127,6 +127,7 @@ export const StyledNavItem = styled.li`
         props.clicked === true &&
         css`
           background: none;
+          color: white;
         `}
     }
   }

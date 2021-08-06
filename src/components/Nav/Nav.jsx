@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import { StyledNavContainer, StyledNavItem, StyledNavList } from "./NavStyle"
 import { Link } from "gatsby"
-import Resume from "../../images/new-resume.pdf"
+import Resume from "../../images/resume.pdf"
 
 const Nav = () => {
   const [clicked, setClicked] = useState(false)
@@ -37,7 +37,6 @@ const Nav = () => {
           onClick={() => setClicked(true)}
           href={Resume}
           target="_blank"
-          rel={"noopener noreferrer"}
         >
           <StyledNavItem clicked={clicked}>Resume</StyledNavItem>
         </a>

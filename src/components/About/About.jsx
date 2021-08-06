@@ -24,10 +24,11 @@ const AboutSection = () => {
         </StyledLazyLoad>
         <AboutCopyContainer>
           <AboutCopy>
-            Hi, I'm Drake McGarrah. I am a full-stack web developer primarily
-            experienced with the MERN (MongoDB, Express, React, Node.js) stack.
-            I enjoy taking people's designs and web page ideas and turning them
-            into reality.
+            <p>Hi, I'm Drake McGarrah. I am a full-stack web developer primarily
+              experienced with the MERN (MongoDB, Express, React, Node.js) stack.</p>
+            <p>For me, it is not enough to just have a website work good enough -
+            I like to understand what happens "under the hood" and am constantly looking for ways to customize and optimize websites. When starting a project, I seek to limit dependencies in order to improve
+            site stability, security, and performance.</p>
           </AboutCopy>
         </AboutCopyContainer>
       </AboutContainer>
@@ -38,10 +39,10 @@ const AboutSection = () => {
             HTML<StyledCheck>&#x2705;</StyledCheck>
           </li>
           <li>
-            CSS<StyledCheck>&#x2705;</StyledCheck>
+            CSS/SCSS<StyledCheck>&#x2705;</StyledCheck>
           </li>
           <li>
-            JavaScript<StyledCheck>&#x2705;</StyledCheck>
+            JavaScript/JSX/jQuery<StyledCheck>&#x2705;</StyledCheck>
           </li>
           <li>
             React<StyledCheck>&#x2705;</StyledCheck>
@@ -53,52 +54,54 @@ const AboutSection = () => {
             Express<StyledCheck>&#x2705;</StyledCheck>
           </li>
           <li>
+            MySQL<StyledCheck>&#x2705;</StyledCheck>
+          </li>
+          <li>
             MongoDB<StyledCheck>&#x2705;</StyledCheck>
           </li>
           <li>
+            Mongoose<StyledCheck>&#x2705;</StyledCheck>
+          </li>
+          <li>
+            JWT<StyledCheck>&#x2705;</StyledCheck>
+          </li>
+          <li>
+            Webpack<StyledCheck>&#x2705;</StyledCheck>
+          </li>
+          {/* <li>
             GraphQL
             <StyledYellow />
-            {/* <span>
-              <div></div>
-            </span> */}
+            
           </li>
           <li>
             Redux
             <StyledYellow />
-            {/* <span>
-              <div></div>
-            </span> */}
+            
           </li>
           <li>
             SQL
             <StyledYellow />
-            {/* <span>
-              <div></div>
-            </span> */}
+            
           </li>
           <li>
             PHP
             <StyledYellow />
-            {/* <span>
-              <div></div>
-            </span> */}
+        
           </li>
           <li>
             Ruby on Rails
             <StyledYellow />
-            {/* <span>
-              <div></div>
-            </span> */}
-          </li>
+         
+          </li> */}
         </ul>
-        <SpecsKey>
+        {/* <SpecsKey>
           <span>
             <div>&#x2705;</div>= Firm Grasp
           </span>
           <span>
             <StyledBox />= Some Experience
           </span>
-        </SpecsKey>
+        </SpecsKey> */}
       </Technical>
     </SectionContainer>
   )
