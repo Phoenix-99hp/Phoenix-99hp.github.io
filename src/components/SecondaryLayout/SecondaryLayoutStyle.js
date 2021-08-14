@@ -22,7 +22,7 @@ export const PageContainer = styled.div`
 
 export const FadeContainer = styled.div`
   // opacity: 1;
-  z-index: -1;
+  // z-index: -1;
   background-color: #070707;
   // display: flex;
   // flex-flow: column;

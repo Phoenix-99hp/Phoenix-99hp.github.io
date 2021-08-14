@@ -20,10 +20,11 @@ export const PageContainer = styled.div`
   // height: 100%;
   height: 100vh;
   // max-height: 100vh;
-  // transition: opacity 2s ease-in;
+  // transition: opacity 1s ease;
 `
 
 export const FadeContainer = styled.div`
+  // opacity: ${({ opacity }) => opacity};
   // opacity: 1;
   background-color: #070707;
   overflow: hidden;

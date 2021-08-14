@@ -55,9 +55,7 @@ const SecondaryLayout = ({ children }) => {
     // <ThemeProvider theme={Theme}>
     //   <GlobalStyle />
     <FadeContainer>
-      <PageContainer
-      // opacity={state.opacity}
-      >
+      <PageContainer opacity={state.opacity}>
         <MainContent>{children}</MainContent>
         <Nav />
       </PageContainer>
