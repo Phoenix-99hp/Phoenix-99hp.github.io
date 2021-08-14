@@ -6,9 +6,9 @@
 
 // require("./src/theme/prismTheme.css")
 
-// exports.onInitialClientRender = () => {
-//   window.addEventListener(
-//     "popstate",
-//     () => (window.location.href = window.location.href)
-//   )
-// }
+exports.onInitialClientRender = () => {
+  window.addEventListener(
+    "popstate",
+    () => (window.location.href = window.location.href)
+  )
+}
