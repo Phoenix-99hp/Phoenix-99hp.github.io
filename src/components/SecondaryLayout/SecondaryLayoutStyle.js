@@ -1,13 +1,13 @@
 import styled, { css, keyframes } from "styled-components"
 
-const fadeIn = keyframes`
-0%{ opacity: 0;
+// const fadeIn = keyframes`
+// 0%{ opacity: 0;
 
-}
+// }
 
-100%{
-opacity: 1;
-}`
+// 100%{
+// opacity: 1;
+// }`
 
 export const PageContainer = styled.div`
   opacity: ${({ opacity }) => opacity};
@@ -17,11 +17,12 @@ export const PageContainer = styled.div`
   display: flex;
   flex-flow: column;
   height: 100%;
-  transition: opacity 1s ease-in;
+  // transition: opacity 1s ease-in;
 `
 
 export const FadeContainer = styled.div`
-  opacity: 1;
+  // opacity: 1;
+  z-index: -1;
   background-color: #070707;
   // display: flex;
   // flex-flow: column;

@@ -3,7 +3,7 @@ import styled from "styled-components"
 export const PortfolioContainer = styled.div`
   // padding: 0 10px;
   max-width: 1100px;
-   width: 100%;
+  width: 100%;
   // min-height: calc(100vh - 80px);
   display: flex;
   align-self: center;
@@ -31,21 +31,18 @@ export const PortfolioProjectContainer = styled.div`
   grid-gap: 15px 15px;
   justify-content: space-evenly;
 
-@media screen and (max-width: 1200px) {
+  @media screen and (max-width: 1200px) {
     grid-template: repeat(3, minmax(300px, 1fr)) / repeat(
         2,
         minmax(300px, 300px)
       );
     justify-content: space-evenly;
-}
+  }
 
-@media screen and (max-width: 950px) {
-    grid-template: repeat(5, minmax(300px, 1fr)) / repeat(
-        1,
-        minmax(200px, 1fr)
-      );
+  @media screen and (max-width: 950px) {
+    grid-template: repeat(5, minmax(300px, 1fr)) / repeat(1, minmax(200px, 1fr));
     justify-content: space-evenly;
-}
+  }
 `
 
 export const PortfolioProject = styled.div`
@@ -75,7 +72,6 @@ export const PortfolioProject = styled.div`
     text-align: left;
     margin-left: 20px;
     margin-rigth: 20px;
-
   }
 
   > ul > li {
@@ -152,7 +148,7 @@ export const LinkContainer = styled.div`
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-   > a {
+  > a {
     flex: 1 1 100%;
     display: block;
     color: #f834bb;
@@ -173,5 +169,4 @@ export const LinkContainer = styled.div`
   > a:nth-of-type(2) {
     padding: 0 0 10px;
   }
-
 `

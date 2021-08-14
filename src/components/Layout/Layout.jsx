@@ -26,10 +26,19 @@ const Layout = ({ children }) => {
 
   const [state, dispatch] = useReducer(reducer, initialState)
 
+  // window.addEventListener("load", () => {
+  //   dispatch({ type: "SHOW_OPACITY" })
+  // })
+
+  const showOpacityHandler = () => dispatch({ type: "SHOW_OPACITY" })
+
   useEffect(() => {
-    setTimeout(() => {
-      dispatch({ type: "SHOW_OPACITY" })
-    }, 500)
+    if (document.readyState === "complete") {
+      showOpacityHandler()
+    } else {
+      window.addEventListener("load", showOpacityHandler)
+      return () => document.removeEventListener("load", showOpacityHandler)
+    }
   }, [])
 
   return (

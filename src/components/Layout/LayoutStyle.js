@@ -1,13 +1,13 @@
 import styled, { css, keyframes } from "styled-components"
 
-const fadeIn = keyframes`
-0% { 
-  opacity: 0;
-}
+// const fadeIn = keyframes`
+// 0% {
+//   opacity: 0;
+// }
 
-100% {
-opacity: 1;
-}`
+// 100% {
+// opacity: 1;
+// }`
 
 export const PageContainer = styled.div`
   opacity: ${({ opacity }) => opacity};
@@ -20,7 +20,7 @@ export const PageContainer = styled.div`
   // height: 100%;
   height: 100vh;
   // max-height: 100vh;
-  transition: opacity 2s ease-in;
+  // transition: opacity 2s ease-in;
 `
 
 export const FadeContainer = styled.div`

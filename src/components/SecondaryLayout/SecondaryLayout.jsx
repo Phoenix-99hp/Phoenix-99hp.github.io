@@ -30,16 +30,34 @@ const SecondaryLayout = ({ children }) => {
 
   const [state, dispatch] = useReducer(reducer, initialState)
 
+  // window.addEventListener("load", () => {
+  //   dispatch({ type: "SHOW_OPACITY" })
+  // })
+
+  // useEffect(() => {
+  //   // setTimeout(() => {
+  //   dispatch({ type: "SHOW_OPACITY" })
+  //   // }, 500)
+  // }, [])
+
+  const showOpacityHandler = () => dispatch({ type: "SHOW_OPACITY" })
+
   useEffect(() => {
-    // setTimeout(() => {
-    dispatch({ type: "SHOW_OPACITY" })
-    // }, 500)
+    if (document.readyState === "complete") {
+      showOpacityHandler()
+    } else {
+      window.addEventListener("load", showOpacityHandler)
+      return () => document.removeEventListener("load", showOpacityHandler)
+    }
   }, [])
+
   return (
     // <ThemeProvider theme={Theme}>
     //   <GlobalStyle />
     <FadeContainer>
-      <PageContainer opacity={state.opacity}>
+      <PageContainer
+      // opacity={state.opacity}
+      >
         <MainContent>{children}</MainContent>
         <Nav />
       </PageContainer>

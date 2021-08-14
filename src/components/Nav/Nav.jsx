@@ -33,11 +33,7 @@ const Nav = () => {
             Portfolio
           </StyledNavItem>
         </Link>
-        <a
-          onClick={() => setClicked(true)}
-          href={Resume}
-          target="_blank"
-        >
+        <a onClick={() => setClicked(true)} href={Resume} target="_blank">
           <StyledNavItem clicked={clicked}>Resume</StyledNavItem>
         </a>
       </StyledNavList>

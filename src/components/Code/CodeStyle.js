@@ -23,7 +23,6 @@ const slideDown = keyframes`
    top: 0;
   }
 
-
   100% {
   top: 100vh;
   }`
@@ -40,7 +39,7 @@ export const BackgroundContainer = styled.code`
   background: none;
   word-break: break-all;
   font-size: 20px;
-  // line-height: 20px;
+  // line-height: 22px;
   // color: red;
 
   // color: #5ad632;
@@ -166,6 +165,8 @@ export const GridItem = styled.div`
   left: 0;
   // color: #5ad632;
   position: relative;
+  // margin-top: 1px;
+  // margin-bottom: 1px;
   padding-top: 1px;
   padding-bottom: 1px;
   padding-left: 1px;
@@ -179,6 +180,8 @@ export const AbsoluteDiv = styled.div`
   left: 0;
   width: 100%;
   height: 100%;
+  // display: flex;
+  // align-items: center;
   // padding-left: 1px;
   // padding-right: 1px;
 
@@ -186,7 +189,7 @@ export const AbsoluteDiv = styled.div`
     isWriting &&
     first &&
     css`
-      animation: ${revealTwo} 0.5s linear 5s;
+      animation: ${revealTwo} 0.5s linear 3s;
     `};
 
   ${({ isWriting, first }) =>
