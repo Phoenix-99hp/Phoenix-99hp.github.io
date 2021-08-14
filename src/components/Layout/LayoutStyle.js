@@ -35,7 +35,7 @@ export const FadeContainer = styled.div`
   // text-align: center;
   width: 100vw;
   // align-items: center;
-  transition: opacity 0.3s ease;
+  // transition: opacity 0.3s ease;
 `
 
 export const Outer = styled.div`
