@@ -1,5 +1,5 @@
 import React, { useEffect, useReducer } from "react"
-import { MainContent, PageContainer, FadeContainer } from "./LayoutStyle"
+import { MainContent, PageContainer, FadeContainer, Outer } from "./LayoutStyle"
 // import Theme from "../../theme/theme"
 // import { ThemeProvider } from "styled-components"
 // import GlobalStyle from "../../theme/globalStyle"
@@ -44,12 +44,14 @@ const Layout = ({ children }) => {
   return (
     // <ThemeProvider theme={Theme}>
     // <GlobalStyle />
-    <FadeContainer>
-      <PageContainer opacity={state.opacity}>
-        <MainContent>{children}</MainContent>
-        <Nav />
-      </PageContainer>
-    </FadeContainer>
+    <Outer>
+      <FadeContainer opacity={state.opacity}>
+        <PageContainer>
+          <MainContent>{children}</MainContent>
+          <Nav />
+        </PageContainer>
+      </FadeContainer>
+    </Outer>
     // </ThemeProvider>
   )
 }

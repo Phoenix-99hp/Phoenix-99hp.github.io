@@ -47,8 +47,8 @@ const SecondaryLayout = ({ children }) => {
       showOpacityHandler()
     } else {
       window.addEventListener("load", showOpacityHandler)
-      return () => document.removeEventListener("load", showOpacityHandler)
     }
+    return () => document.removeEventListener("load", showOpacityHandler)
   }, [])
 
   return (

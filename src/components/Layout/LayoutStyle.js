@@ -10,7 +10,6 @@ import styled, { css, keyframes } from "styled-components"
 // }`
 
 export const PageContainer = styled.div`
-  opacity: ${({ opacity }) => opacity};
   background-color: #070707;
   display: flex;
   // min-height: 100vh;
@@ -20,11 +19,10 @@ export const PageContainer = styled.div`
   // height: 100%;
   height: 100vh;
   // max-height: 100vh;
-  // transition: opacity 1s ease;
 `
 
 export const FadeContainer = styled.div`
-  // opacity: ${({ opacity }) => opacity};
+  opacity: ${({ opacity }) => opacity};
   // opacity: 1;
   background-color: #070707;
   overflow: hidden;
@@ -37,6 +35,11 @@ export const FadeContainer = styled.div`
   // text-align: center;
   width: 100vw;
   // align-items: center;
+  // transition: opacity 0.5s ease;
+`
+
+export const Outer = styled.div`
+  background-color: #070707;
 `
 
 export const MainContent = styled.main`
