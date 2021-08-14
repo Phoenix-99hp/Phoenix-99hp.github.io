@@ -34,8 +34,10 @@ const Layout = ({ children }) => {
 
   useEffect(() => {
     if (document.readyState === "complete") {
+      console.log("comp")
       showOpacityHandler()
     } else {
+      console.log("else")
       window.addEventListener("load", showOpacityHandler)
     }
     return () => document.removeEventListener("load", showOpacityHandler)
