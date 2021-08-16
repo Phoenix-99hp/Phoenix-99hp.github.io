@@ -6,6 +6,7 @@ import {
   Loader,
   // LoaderOuter,
 } from "./LineLoaderStyle"
+import { useMediaQuery } from "react-responsive"
 
 const LineLoader = () => {
   return (

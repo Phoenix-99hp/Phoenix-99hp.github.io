@@ -58,6 +58,15 @@ export const LoaderContainer = styled.div`
   // border: 2px solid red;
   position: relative;
   background-color: gray;
+  margin-bottom: 74px;
+
+  @media screen and (max-width: 850px) {
+    margin-bottom: 202px;
+  }
+
+  @media screen and (orientation: landscape) {
+    margin-bottom: 74px;
+  }
 `
 
 export const Loader = styled.div`
