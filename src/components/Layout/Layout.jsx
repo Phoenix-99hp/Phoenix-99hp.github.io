@@ -1,4 +1,4 @@
-import React, { useEffect, useReducer } from "react"
+import React, { useEffect, useLayoutEffect, useReducer } from "react"
 import { MainContent, PageContainer, FadeContainer, Outer } from "./LayoutStyle"
 // import Theme from "../../theme/theme"
 // import { ThemeProvider } from "styled-components"
@@ -30,11 +30,12 @@ const Layout = ({ children }) => {
     dispatch({ type: "SHOW_OPACITY" })
   }
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     if (document.readyState === "complete") {
-      setTimeout(() => {
-        showOpacityHandler()
-      })
+      showOpacityHandler()
+      // setTimeout(() => {
+      //   showOpacityHandler()
+      // })
     } else {
       window.addEventListener("load", showOpacityHandler)
     }
