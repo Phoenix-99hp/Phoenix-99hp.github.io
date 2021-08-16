@@ -1,11 +1,11 @@
-import React, { useReducer, useEffect } from "react"
+import React, { useReducer, useEffect, useContext } from "react"
 import Layout from "../components/Layout/Layout"
 import IndexHero from "../components/IndexHero/IndexHero"
 import Code from "../components/Code/Code"
-// import Loader from "../components/Loader/Loader"
-// import { useMediaQuery } from "react-responsive"
+import { AnimationContext } from "../contexts/GlobalContext"
 
 const IndexPage = () => {
+  const { showAnimation } = useContext(AnimationContext)
   const initialState = {
     rowsNum: null,
     rowsArr: [],
@@ -74,9 +74,29 @@ const IndexPage = () => {
     })
   }
 
+  // // Function with stuff to execute
+  // function resizeContent() {
+  //   // Do loads of stuff once window has resized
+  //   console.log("resized")
+  // }
+
+  // // Eventlistener
+  // window.addEventListener("resize", debounce(resizeContent, 150))
+
+  // const debounce = (func, time) => {
+  //   const duration = time || 200
+  //   let timer
+  //   return event => {
+  //     if (timer) clearTimeout(timer)
+  //     timer = setTimeout(func, duration, event)
+  //   }
+  // }
+
   useEffect(() => {
-    calculateRows()
-    window.addEventListener("resize", calculateRows)
+    if (showAnimation) {
+      calculateRows()
+      window.addEventListener("resize", calculateRows)
+    }
     return () => window.removeEventListener("resize", calculateRows)
   }, [])
 
@@ -85,7 +105,9 @@ const IndexPage = () => {
       {!state.hasError && !state.isCalculating ? (
         <Layout>
           <IndexHero />
-          <Code rowsNum={state.rowsNum} rowsArr={state.rowsArr} />
+          {showAnimation ? (
+            <Code rowsNum={state.rowsNum} rowsArr={state.rowsArr} />
+          ) : null}
         </Layout>
       ) : null}
     </>

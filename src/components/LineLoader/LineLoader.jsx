@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect } from "react"
 import {
   FadeContainer,
   PageContainer,
@@ -6,9 +6,21 @@ import {
   Loader,
   // LoaderOuter,
 } from "./LineLoaderStyle"
-import { useMediaQuery } from "react-responsive"
 
 const LineLoader = () => {
+  // const debounce = (func, time) => {
+  //   const duration = time || 300
+  //   let timer
+  //   return event => {
+  //     if (timer) clearTimeout(timer)
+  //     timer = setTimeout(func, duration, event)
+  //   }
+  // }
+
+  // useEffect(() => {
+
+  // }, [])
+
   return (
     <FadeContainer>
       <PageContainer>

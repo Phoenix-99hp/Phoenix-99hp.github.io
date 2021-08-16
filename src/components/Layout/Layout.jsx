@@ -1,4 +1,4 @@
-import React, { useEffect, useLayoutEffect, useReducer } from "react"
+import React, { useEffect, useContext, useReducer } from "react"
 import { MainContent, PageContainer, FadeContainer, Outer } from "./LayoutStyle"
 // import Theme from "../../theme/theme"
 // import { ThemeProvider } from "styled-components"
@@ -6,12 +6,14 @@ import { MainContent, PageContainer, FadeContainer, Outer } from "./LayoutStyle"
 import Nav from "../Nav/Nav"
 import LineLoader from "../LineLoader/LineLoader"
 import "./Layout.module.css"
+import { AnimationContext } from "../../contexts/GlobalContext"
 // import "../../theme/globalFonts.css"
 
 const Layout = ({ children }) => {
+  const { showAnimation } = useContext(AnimationContext)
   const initialState = {
-    view: "loader",
-    opacity: 0,
+    opacity: showAnimation ? 0 : 1,
+    timeouts: [],
   }
 
   const reducer = (state, action) => {
@@ -29,10 +31,24 @@ const Layout = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, initialState)
 
   const showOpacityHandler = () => {
-    setTimeout(() => {
-      dispatch({ type: "SHOW_OPACITY" })
-    }, 1000)
+    // if (state.timeouts[0]) {
+    //   state.timeouts.forEach(t => clearTimeout(t))
+    // }
+    state.timeouts.push(
+      setTimeout(() => {
+        dispatch({ type: "SHOW_OPACITY" })
+      }, 1000)
+    )
   }
+
+  // const debounce = (func, time) => {
+  //   const duration = time || 200
+  //   let timer
+  //   return event => {
+  //     if (timer) clearTimeout(timer)
+  //     timer = setTimeout(func, duration, event)
+  //   }
+  // }
 
   useEffect(() => {
     if (document.readyState === "complete") {
@@ -40,12 +56,14 @@ const Layout = ({ children }) => {
     } else {
       window.addEventListener("load", showOpacityHandler)
     }
-    // return () => document.removeEventListener("load", showOpacityHandler)
+    return () => {
+      window.removeEventListener("load", showOpacityHandler)
+      state.timeouts.forEach(t => clearTimeout(t))
+    }
   }, [])
 
   return (
     <Outer>
-      {/* <LineLoader /> */}
       {state.opacity === 0 ? <LineLoader /> : null}
       <FadeContainer opacity={state.opacity}>
         <PageContainer>

@@ -6,9 +6,13 @@
 
 // require("./src/theme/prismTheme.css")
 
-exports.onInitialClientRender = () => {
+import GlobalContext from "./src/contexts/GlobalContext"
+
+export const onInitialClientRender = () => {
   window.addEventListener(
     "popstate",
     () => (window.location.href = window.location.href)
   )
 }
+
+export const wrapRootElement = GlobalContext
