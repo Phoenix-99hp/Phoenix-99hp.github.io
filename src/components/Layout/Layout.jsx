@@ -26,22 +26,20 @@ const Layout = ({ children }) => {
 
   const [state, dispatch] = useReducer(reducer, initialState)
 
-  // window.addEventListener("load", () => {
-  //   dispatch({ type: "SHOW_OPACITY" })
-  // })
-
   const showOpacityHandler = () => dispatch({ type: "SHOW_OPACITY" })
 
-  useEffect(() => {
-    // if (document.readyState === "complete") {
-    //   setTimeout(() => {
-    //     showOpacityHandler()
-    //   }, 500)
-    // } else {
-    window.addEventListener("load", showOpacityHandler)
-    // }
-    return () => document.removeEventListener("load", showOpacityHandler)
-  }, [])
+  window.addEventListener("load", showOpacityHandler)
+
+  // useEffect(() => {
+  //   if (document.readyState === "complete") {
+  //     setTimeout(() => {
+  //       showOpacityHandler()
+  //     }, 500)
+  //   } else {
+  //     window.addEventListener("load", showOpacityHandler)
+  //   }
+  //   return () => document.removeEventListener("load", showOpacityHandler)
+  // }, [])
 
   return (
     // <ThemeProvider theme={Theme}>
