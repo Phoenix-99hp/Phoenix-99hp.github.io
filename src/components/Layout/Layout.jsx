@@ -30,12 +30,11 @@ const Layout = ({ children }) => {
     dispatch({ type: "SHOW_OPACITY" })
   }
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     if (document.readyState === "complete") {
-      showOpacityHandler()
-      // setTimeout(() => {
-      //   showOpacityHandler()
-      // })
+      setTimeout(() => {
+        showOpacityHandler()
+      }, 300)
     } else {
       window.addEventListener("load", showOpacityHandler)
     }
