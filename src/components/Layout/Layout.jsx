@@ -1,4 +1,4 @@
-import React, { useEffect, useReducer } from "react"
+import React, { useEffect, useLayoutEffect, useReducer } from "react"
 import { MainContent, PageContainer, FadeContainer, Outer } from "./LayoutStyle"
 // import Theme from "../../theme/theme"
 // import { ThemeProvider } from "styled-components"
@@ -27,23 +27,20 @@ const Layout = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, initialState)
 
   const showOpacityHandler = () => {
+    console.log("hi")
     dispatch({ type: "SHOW_OPACITY" })
   }
 
-  if (typeof window !== "undefined") {
-    window.addEventListener("load", showOpacityHandler, { once: true })
-  }
-
-  // useEffect(() => {
-  //   // if (document.readyState === "complete") {
-  //   //   setTimeout(() => {
-  //   //     showOpacityHandler()
-  //   //   }, 500)
-  //   // } else {
-  //   //   window.addEventListener("load", showOpacityHandler)
-  //   // }
-  //   return () => document.removeEventListener("load", showOpacityHandler)
-  // }, [])
+  useLayoutEffect(() => {
+    // if (document.readyState === "complete") {
+    //   setTimeout(() => {
+    //     showOpacityHandler()
+    //   }, 500)
+    // } else {
+    window.addEventListener("load", showOpacityHandler)
+    // }
+    return () => document.removeEventListener("load", showOpacityHandler)
+  }, [])
 
   return (
     // <ThemeProvider theme={Theme}>
