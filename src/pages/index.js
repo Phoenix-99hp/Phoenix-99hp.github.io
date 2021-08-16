@@ -11,7 +11,6 @@ const IndexPage = () => {
     rowsArr: [],
     isCalculating: true,
     hasError: false,
-    // opacity: 0,
   }
   const reducer = (state, action) => {
     switch (action.type) {
@@ -35,11 +34,6 @@ const IndexPage = () => {
           hasError: true,
           isCalculating: false,
         }
-      // case "SHOW_OPACITY":
-      //   return {
-      //     ...state,
-      //     opacity: 1,
-      //   }
       default:
         return state
     }
@@ -49,12 +43,10 @@ const IndexPage = () => {
   const breakpoint = useMediaQuery({ query: "(max-width: 850px)" })
   const landscape = useMediaQuery({ query: "(orientation: landscape)" })
 
-  useEffect(() => {
+  const calculateRows = () => {
     dispatch({
       type: "CALCULATE_ROWS",
     })
-
-    // console.log(window.innerHeight)
 
     const height = landscape
       ? window.innerHeight - 114
@@ -71,23 +63,19 @@ const IndexPage = () => {
     for (let i = 0; i < rows; i++) {
       rowsArr.push(i)
     }
-    // setTimeout(() => {
     dispatch({
       type: "DONE_CALCULATING",
       payload: rowsArr,
     })
-    // }, 2000)
+  }
+
+  useEffect(() => {
+    calculateRows()
+    window.addEventListener("resize", calculateRows)
   }, [])
 
   return (
     <>
-      {/* {state.isCalculating ? ( */}
-      {/* <Loader
-          // offset={landscape ? "0px" : breakpoint ? "222px" : "94px"}
-          // offset={breakpoint && landscape ? "0" : breakpoint ? "242px" : "0"}
-          text={"MAKING CALCULATIONS..."}
-        />
-      ) : */}
       {!state.hasError && !state.isCalculating ? (
         <Layout>
           <IndexHero />
