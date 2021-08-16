@@ -91,7 +91,6 @@ export const AnimatedCursor = styled.div`
 `
 
 export const OuterContainer = styled.div`
-  display: ${({ display }) => display};
   max-width: 1100px;
   background: #070707;
   position: relative;
