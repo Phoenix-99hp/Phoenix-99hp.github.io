@@ -34,7 +34,7 @@ const Layout = ({ children }) => {
     if (document.readyState === "complete") {
       setTimeout(() => {
         showOpacityHandler()
-      }, 300)
+      }, 500)
     } else {
       window.addEventListener("load", showOpacityHandler)
     }
