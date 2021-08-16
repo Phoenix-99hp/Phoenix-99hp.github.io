@@ -4,11 +4,13 @@ import { MainContent, PageContainer, FadeContainer, Outer } from "./LayoutStyle"
 // import { ThemeProvider } from "styled-components"
 // import GlobalStyle from "../../theme/globalStyle"
 import Nav from "../Nav/Nav"
+import LineLoader from "../LineLoader/LineLoader"
 import "./Layout.module.css"
 // import "../../theme/globalFonts.css"
 
 const Layout = ({ children }) => {
   const initialState = {
+    view: "loader",
     opacity: 0,
   }
 
@@ -27,14 +29,14 @@ const Layout = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, initialState)
 
   const showOpacityHandler = () => {
-    dispatch({ type: "SHOW_OPACITY" })
+    setTimeout(() => {
+      dispatch({ type: "SHOW_OPACITY" })
+    }, 1000)
   }
 
   useEffect(() => {
     if (document.readyState === "complete") {
-      setTimeout(() => {
-        showOpacityHandler()
-      }, 500)
+      showOpacityHandler()
     } else {
       window.addEventListener("load", showOpacityHandler)
     }
@@ -42,9 +44,9 @@ const Layout = ({ children }) => {
   }, [])
 
   return (
-    // <ThemeProvider theme={Theme}>
-    // <GlobalStyle />
     <Outer>
+      {/* <LineLoader /> */}
+      {state.opacity === 0 ? <LineLoader /> : ""}
       <FadeContainer opacity={state.opacity}>
         <PageContainer>
           <MainContent>{children}</MainContent>
@@ -52,7 +54,6 @@ const Layout = ({ children }) => {
         </PageContainer>
       </FadeContainer>
     </Outer>
-    // </ThemeProvider>
   )
 }
 

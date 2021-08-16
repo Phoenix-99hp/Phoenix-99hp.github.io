@@ -3,13 +3,19 @@ import {
   FadeContainer,
   PageContainer,
   LoaderContainer,
-} from "../Layout/LayoutStyle"
+  Loader,
+  // LoaderOuter,
+} from "./LineLoaderStyle"
 
 const LineLoader = () => {
   return (
     <FadeContainer>
-      <PageContainer opacity={state.opacity}>
-        <LoaderContainer>hi</LoaderContainer>
+      <PageContainer>
+        {/* <LoaderOuter> */}
+        <LoaderContainer>
+          <Loader />
+        </LoaderContainer>
+        {/* </LoaderOuter> */}
       </PageContainer>
     </FadeContainer>
   )
