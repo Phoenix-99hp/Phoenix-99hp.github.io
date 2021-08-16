@@ -72,6 +72,7 @@ const IndexPage = () => {
   useEffect(() => {
     calculateRows()
     window.addEventListener("resize", calculateRows)
+    return () => window.removeEventListener("resize", calculateRows)
   }, [])
 
   return (
