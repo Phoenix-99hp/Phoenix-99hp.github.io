@@ -33,13 +33,13 @@ const Layout = ({ children }) => {
   const showOpacityHandler = () => dispatch({ type: "SHOW_OPACITY" })
 
   useEffect(() => {
-    if (document.readyState === "complete") {
-      setTimeout(() => {
-        showOpacityHandler()
-      }, 500)
-    } else {
-      window.addEventListener("load", showOpacityHandler)
-    }
+    // if (document.readyState === "complete") {
+    //   setTimeout(() => {
+    //     showOpacityHandler()
+    //   }, 500)
+    // } else {
+    window.addEventListener("load", showOpacityHandler)
+    // }
     return () => document.removeEventListener("load", showOpacityHandler)
   }, [])
 
