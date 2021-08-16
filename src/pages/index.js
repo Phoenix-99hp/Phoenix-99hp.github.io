@@ -2,8 +2,8 @@ import React, { useReducer, useEffect } from "react"
 import Layout from "../components/Layout/Layout"
 import IndexHero from "../components/IndexHero/IndexHero"
 import Code from "../components/Code/Code"
-import Loader from "../components/Loader/Loader"
-import { useMediaQuery } from "react-responsive"
+// import Loader from "../components/Loader/Loader"
+// import { useMediaQuery } from "react-responsive"
 
 const IndexPage = () => {
   const initialState = {
@@ -40,10 +40,15 @@ const IndexPage = () => {
   }
 
   const [state, dispatch] = useReducer(reducer, initialState)
-  const breakpoint = useMediaQuery({ query: "(max-width: 850px)" })
-  const landscape = useMediaQuery({ query: "(orientation: landscape)" })
+  // const breakpoint = useMediaQuery({ query: "(max-width: 850px)" })
+  // // const breakpoint = window.innerWidth > 850 ? false : true
+  // const landscape = useMediaQuery({ query: "(orientation: landscape)" })
 
   const calculateRows = () => {
+    const breakpoint = window.innerWidth > 850 ? false : true
+    const landscape = window.matchMedia("(orientation: landscape)").matches
+      ? true
+      : false
     dispatch({
       type: "CALCULATE_ROWS",
     })
@@ -80,11 +85,7 @@ const IndexPage = () => {
       {!state.hasError && !state.isCalculating ? (
         <Layout>
           <IndexHero />
-          <Code
-            // breakpoint={breakpoint}
-            rowsNum={state.rowsNum}
-            rowsArr={state.rowsArr}
-          />
+          <Code rowsNum={state.rowsNum} rowsArr={state.rowsArr} />
         </Layout>
       ) : null}
     </>

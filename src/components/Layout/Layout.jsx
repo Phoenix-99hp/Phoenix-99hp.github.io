@@ -40,13 +40,13 @@ const Layout = ({ children }) => {
     } else {
       window.addEventListener("load", showOpacityHandler)
     }
-    return () => document.removeEventListener("load", showOpacityHandler)
+    // return () => document.removeEventListener("load", showOpacityHandler)
   }, [])
 
   return (
     <Outer>
       {/* <LineLoader /> */}
-      {state.opacity === 0 ? <LineLoader /> : ""}
+      {state.opacity === 0 ? <LineLoader /> : null}
       <FadeContainer opacity={state.opacity}>
         <PageContainer>
           <MainContent>{children}</MainContent>
