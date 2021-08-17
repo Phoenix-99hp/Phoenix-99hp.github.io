@@ -258,7 +258,7 @@ const IndexPage = () => {
 
   return (
     <>
-      {state.isRecalculating && show ? (
+      {state.isRecalculating && state.recalculate && show ? (
         <Recalculating />
       ) : !state.hasError && (!state.isCalculating || !show) ? (
         <Layout>
