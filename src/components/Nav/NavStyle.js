@@ -1,3 +1,4 @@
+import { nominalTypeHack } from "prop-types"
 import styled, { css } from "styled-components"
 
 export const StyledNavContainer = styled.nav`
@@ -116,21 +117,19 @@ export const StyledNavItem = styled.li`
     // margin: 10px 0;
   }
 
-  &:hover {
-    background-color: #dff959;
-    color: black;
-  }
-
-  @media (-moz-touch-enabled: 1), (pointer: coarse) {
+  @media (pointer: fine) {
     &:hover {
-      ${props =>
-        props.clicked === true &&
-        css`
-          background: none;
-          color: white;
-        `}
+      background-color: #dff959;
+      color: black;
     }
   }
+
+  // @media (pointer: coarse) {
+  //   &:hover {
+  //     background: none;
+  //     color: white;
+  //   }
+  // }
 
   @media screen and (orientation: landscape) {
     flex-wrap: nowrap;
