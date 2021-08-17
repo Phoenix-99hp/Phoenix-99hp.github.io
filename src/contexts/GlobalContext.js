@@ -10,8 +10,8 @@ const GlobalContext = ({ children }) => {
   return (
     <AnimationContext.Provider
       value={{
-        showAnimation: showAnimation,
-        setShowAnimation: newData => setShowAnimation(newData),
+        show: showAnimation,
+        setShow: newData => setShowAnimation(newData),
       }}
     >
       {children}

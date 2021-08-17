@@ -10,9 +10,9 @@ import { AnimationContext } from "../../contexts/GlobalContext"
 // import "../../theme/globalFonts.css"
 
 const Layout = ({ children }) => {
-  const { showAnimation } = useContext(AnimationContext)
+  const { show } = useContext(AnimationContext)
   const initialState = {
-    opacity: showAnimation ? 0 : 1,
+    opacity: show ? 0 : 1,
     timeouts: [],
   }
 

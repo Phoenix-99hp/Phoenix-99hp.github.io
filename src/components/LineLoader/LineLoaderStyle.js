@@ -57,7 +57,7 @@ export const LoaderContainer = styled.div`
   height: 2px;
   // border: 2px solid red;
   position: relative;
-  background-color: gray;
+  background-color: #b5b5b5;
   margin-bottom: 74px;
 
   @media screen and (max-width: 850px) {
@@ -75,5 +75,5 @@ export const Loader = styled.div`
   background-color: #4ef542;
   position: absolute;
   left: 0;
-  animation: ${move} 2s ease infinite;
+  animation: ${move} 1.15s ease infinite;
 `

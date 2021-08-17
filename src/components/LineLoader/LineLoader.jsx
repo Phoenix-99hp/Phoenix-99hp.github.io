@@ -1,4 +1,4 @@
-import React, { useEffect } from "react"
+import React, { useEffect, useReducer } from "react"
 import {
   FadeContainer,
   PageContainer,
@@ -8,6 +8,33 @@ import {
 } from "./LineLoaderStyle"
 
 const LineLoader = () => {
+  // const initialState = {
+  //   opacity: 0,
+  //   timeouts: [],
+  // }
+
+  // const reducer = (state, action) => {
+  //   switch (action.type) {
+  //     case "SHOW_OPACITY":
+  //       return {
+  //         ...state,
+  //         opacity: 1,
+  //       }
+  //     default:
+  //       return state
+  //   }
+  // }
+
+  // const [state, dispatch] = useReducer(reducer, initialState)
+
+  // const showOpacityHandler = () => {
+  //   state.timeouts.push(
+  //     setTimeout(() => {
+  //       dispatch({ type: "SHOW_OPACITY" })
+  //     }, 1000)
+  //   )
+  // }
+
   // const debounce = (func, time) => {
   //   const duration = time || 300
   //   let timer
