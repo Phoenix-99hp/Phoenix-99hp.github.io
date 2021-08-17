@@ -189,14 +189,14 @@ export const AbsoluteDiv = styled.div`
     isWriting &&
     first &&
     css`
-      animation: ${revealTwo} 0.5s linear 5s;
+      animation: ${revealTwo} 0.4s linear 5s;
     `};
 
   ${({ isWriting, first }) =>
     isWriting &&
     !first &&
     css`
-      animation: ${revealTwo} 0.5s linear;
+      animation: ${revealTwo} 0.4s linear;
     `};
 
   ${({ doneWriting }) =>
