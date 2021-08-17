@@ -245,9 +245,9 @@ const IndexPage = () => {
 
   useEffect(() => {
     if (show) {
-      initialCalculation(true)
       window.addEventListener("touchstart", isTouchEvent)
       window.addEventListener("resize", calculateRows)
+      initialCalculation()
     }
     return () => {
       window.removeEventListener("resize", calculateRows)
@@ -260,7 +260,8 @@ const IndexPage = () => {
     <>
       {state.isRecalculating && state.recalculate && show ? (
         <Recalculating />
-      ) : !state.hasError && (!state.isCalculating || !show) ? (
+      ) : !state.hasError &&
+        (!state.isCalculating || !show || !state.recalculate) ? (
         <Layout>
           <IndexHero />
           {show ? (
