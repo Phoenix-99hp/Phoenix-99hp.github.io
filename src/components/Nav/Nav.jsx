@@ -13,6 +13,7 @@ const Nav = () => {
           <StyledNavItem
             selected={
               typeof window !== "undefined" &&
+              window.location.pathname !== "/" &&
               window.location.pathname.includes("/About")
                 ? true
                 : false
@@ -25,6 +26,7 @@ const Nav = () => {
           <StyledNavItem
             selected={
               typeof window !== "undefined" &&
+              window.location.pathname !== "/" &&
               window.location.pathname.includes("/Portfolio")
                 ? true
                 : false
