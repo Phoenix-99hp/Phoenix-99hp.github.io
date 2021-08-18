@@ -246,12 +246,14 @@ const IndexPage = () => {
   useEffect(() => {
     if (show) {
       window.addEventListener("touchstart", isTouchEvent)
+      window.addEventListener("touchmove", isTouchEvent)
       window.addEventListener("resize", calculateRows)
       initialCalculation()
     }
     return () => {
       window.removeEventListener("resize", calculateRows)
       window.removeEventListener("touchstart", isTouchEvent)
+      window.removeEventListener("touchmove", isTouchEvent)
       state.timeouts.forEach(t => clearTimeout(t))
     }
   }, [])
