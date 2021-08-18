@@ -3,19 +3,28 @@ import React, { useState } from "react"
 // import CartContextProvider from "../CartContext";
 
 export const AnimationContext = React.createContext()
+export const InitialLoadContext = React.createContext()
 
 const GlobalContext = ({ children }) => {
   const [showAnimation, setShowAnimation] = useState(true)
+  const [initialLoad, setInitialLoad] = useState(true)
 
   return (
-    <AnimationContext.Provider
+    <InitialLoadContext.Provider
       value={{
-        show: showAnimation,
-        setShow: newData => setShowAnimation(newData),
+        initial: initialLoad,
+        setInitial: newData => setInitialLoad(newData),
       }}
     >
-      {children}
-    </AnimationContext.Provider>
+      <AnimationContext.Provider
+        value={{
+          show: showAnimation,
+          setShow: newData => setShowAnimation(newData),
+        }}
+      >
+        {children}
+      </AnimationContext.Provider>
+    </InitialLoadContext.Provider>
   )
 }
 
