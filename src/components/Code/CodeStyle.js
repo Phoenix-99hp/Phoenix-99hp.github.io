@@ -39,6 +39,7 @@ export const BackgroundContainer = styled.code`
   background: none;
   word-break: break-all;
   font-size: 20px;
+  user-select: none;
   // line-height: 22px;
   // color: red;
 
@@ -95,6 +96,7 @@ export const OuterContainer = styled.div`
   background: #070707;
   position: relative;
   max-height: calc(100vh - 114px);
+  user-select: none;
 
   // height: 100%;
   // display: flex;
@@ -142,6 +144,7 @@ export const GridContainer = styled.div`
   max-width: 1100px;
   position: relative;
   background: none;
+  user-select: none;
 
   ${({ rows }) =>
     rows &&
@@ -171,6 +174,7 @@ export const GridItem = styled.div`
   padding-bottom: 1px;
   padding-left: 1px;
   padding-right: 1px;
+  user-select: none;
 `
 export const AbsoluteDiv = styled.div`
   z-index: 9;
@@ -180,6 +184,7 @@ export const AbsoluteDiv = styled.div`
   left: 0;
   width: 100%;
   height: 100%;
+  user-select: none;
   // display: flex;
   // align-items: center;
   // padding-left: 1px;
