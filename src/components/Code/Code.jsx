@@ -13,7 +13,6 @@ import { AnimationContext } from "../../contexts/GlobalContext"
 
 const Code = ({ rowsNum, rowsArr }) => {
   const { show, setShow } = useContext(AnimationContext)
-  console.log(show)
   useEffect(() => {
     Prism.highlightAll()
   }, [])
