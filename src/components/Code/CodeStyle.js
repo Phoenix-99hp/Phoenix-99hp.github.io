@@ -37,6 +37,8 @@ export const BackgroundContainer = styled.code`
   right: initial;
   max-width: 1100px;
   background: none;
+  // white-space: pre;
+  // word-wrap: break-word;
   word-break: break-all;
   font-size: 20px;
   user-select: none;
@@ -66,7 +68,7 @@ export const BackgroundContainer = styled.code`
   ${({ shouldRotate }) =>
     shouldRotate &&
     css`
-      animation: ${slideDown} 3s;
+      animation: ${slideDown} 4s;
       opacity: 0;
       top: -100vh;
     `};
@@ -89,6 +91,12 @@ export const AnimatedCursor = styled.div`
       display: inherit;
       animation: ${flashCursor} linear 0.5s infinite;
     `}
+
+  ${({ show }) =>
+    show &&
+    css`
+      display: inherit;
+    `}
 `
 
 export const OuterContainer = styled.div`
@@ -97,7 +105,7 @@ export const OuterContainer = styled.div`
   position: relative;
   max-height: calc(100vh - 114px);
   user-select: none;
-
+  // white-space: pre-line;
   // height: 100%;
   // display: flex;
   // align-items: center;
@@ -194,20 +202,21 @@ export const AbsoluteDiv = styled.div`
     isWriting &&
     first &&
     css`
-      animation: ${revealTwo} 0.4s linear 5s;
+      animation: ${revealTwo} 0.8s linear 5s;
     `};
 
   ${({ isWriting, first }) =>
     isWriting &&
     !first &&
     css`
-      animation: ${revealTwo} 0.4s linear;
+      animation: ${revealTwo} 0.8s linear;
     `};
 
   ${({ doneWriting }) =>
     doneWriting &&
     css`
       background: none;
+      display: none;
     `};
 
   @media screen and (max-width: 850px) {
