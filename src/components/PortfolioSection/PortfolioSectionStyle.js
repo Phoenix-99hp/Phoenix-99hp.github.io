@@ -27,6 +27,10 @@ export const PortfolioContainer = styled.div`
   //   padding-bottom: 0;
   // }
 
+  @media screen and (max-width: 1200px) {
+    padding-bottom: 80px;
+  }
+
   > div {
     // align-self: flex-start;
     width: 100%;
