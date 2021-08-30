@@ -70,7 +70,8 @@ export const StyledNavList = styled.ul`
 
   @media screen and (orientation: landscape) {
     flex-wrap: nowrap;
-    width: 80%;
+    // width: ${({ maxW }) => (maxW === 100 ? "100%" : "80%")};
+    // width: 100%;
 
     > a:nth-of-type(2) {
       margin-top: 0;

@@ -8,45 +8,50 @@ import {
   PortfolioProject,
   ProjectsTitle,
   SubHeading,
-  LinkContainer
+  LinkContainer,
+  Outer,
 } from "./PortfolioSectionStyle"
 import mcjIMG from "../../images/mc-j-tablet-mobile-carousel.png"
 
 const PortfolioSection = () => {
   return (
-    <PortfolioContainer>
-      <div>
-        <ProjectsTitle>Projects</ProjectsTitle>
-        <StyledDisclaimerContainer>
-          <StyledDisclaimer>
-            * = Deployed to Heroku using the free tier (may take some time to initially load).
-          </StyledDisclaimer>
-        </StyledDisclaimerContainer>
+    <Outer>
+      <ProjectsTitle>Projects</ProjectsTitle>
+      <PortfolioContainer>
+        {/* <ProjectsTitle>Projects</ProjectsTitle> */}
+        {/* <div> */}
+        {/* <ProjectsTitle>Projects</ProjectsTitle> */}
+        {/* <StyledDisclaimerContainer> */}
+        {/* <StyledDisclaimer>
+            * = Deployed to Heroku using the free tier (may take some time to
+            initially load).
+          </StyledDisclaimer> */}
+        {/* </StyledDisclaimerContainer> */}
         <PortfolioProjectContainer>
           <PortfolioProject>
             <h1>Battleship Game</h1>
             <LinkContainer>
-            <a
-              href={"https://github.com/Phoenix-99hp/Battleship-Game"}
-              target="_blank"
-              rel={"noopener noreferrer"}
-            >
-              <span>GitHub Code</span>
-            </a>
-            <a
-              href={"https://phoenix-99hp.github.io/Battleship-Game/"}
-              target="_blank"
-              rel={"noopener noreferrer"}
-            >
-              <span>Deployed</span>
+              <a
+                href={"https://github.com/Phoenix-99hp/Battleship-Game"}
+                target="_blank"
+                rel={"noopener noreferrer"}
+              >
+                <span>GitHub Code</span>
               </a>
-              </LinkContainer>
+              <a
+                href={"https://phoenix-99hp.github.io/Battleship-Game/"}
+                target="_blank"
+                rel={"noopener noreferrer"}
+              >
+                <span>Deployed</span>
+              </a>
+            </LinkContainer>
             <h4>Skills Demonstrated:</h4>
             <ul>
               <li>Complex front-end logic</li>
               <li>Vanilla JS</li>
               <li>Webpack</li>
-              </ul>
+            </ul>
           </PortfolioProject>
           {/* <PortfolioProject>
             <h1>Blog</h1>
@@ -75,7 +80,7 @@ const PortfolioSection = () => {
               <li>Webpack</li>
             </ul>
           </PortfolioProject> */}
-          <PortfolioProject>
+          {/* <PortfolioProject>
             <h1>Clubhouse</h1>
             <LinkContainer>
             <a
@@ -101,8 +106,8 @@ const PortfolioSection = () => {
               <li>Node JS</li>
               <li>Express</li>
             </ul>
-          </PortfolioProject>
-          <PortfolioProject>
+          </PortfolioProject> */}
+          {/* <PortfolioProject>
             <h1>Inventory</h1>
             <LinkContainer>
             <a
@@ -129,25 +134,23 @@ const PortfolioSection = () => {
               <li>Node JS</li>
               <li>Express</li>
             </ul>
-          </PortfolioProject>
+          </PortfolioProject> */}
           <PortfolioProject>
             <h1>Matching Game</h1>
             <LinkContainer>
-            <a
-              href={"https://github.com/Phoenix-99hp/matching-game"}
-              target="_blank"
-              rel={"noopener noreferrer"}
-            >
-              <span>GitHub Code</span>
-            </a>
-            <a
-              href={"https://phoenix-99hp.github.io/matching-game/"}
-              target="_blank"
-              rel={"noopener noreferrer"}
-            >
-              <span>Deployed</span>
+              <a
+                href={"https://github.com/Phoenix-99hp/matching-game"}
+                target="_blank"
+              >
+                <span>GitHub Code</span>
               </a>
-              </LinkContainer>
+              <a
+                href={"https://phoenix-99hp.github.io/matching-game/"}
+                target="_blank"
+              >
+                <span>Deployed</span>
+              </a>
+            </LinkContainer>
             <h4>Skills Demonstrated:</h4>
             <ul>
               <li>React</li>
@@ -159,24 +162,23 @@ const PortfolioSection = () => {
             <h1>Mc-J Carousel</h1>
             <SubHeading>(Tablet and Mobile Views)</SubHeading>
             <LinkContainer>
-            <a
-              href={"https://www.mcj.co"}
-              target="_blank"
-              rel={"noopener noreferrer"}
-            >
-            <span>Full site</span>
-            </a>
-            <a
-              href={mcjIMG}
-              target="_blank"
-              rel={"noopener noreferrer"}
-            >
-            <span>Carousel</span>
+              <a
+                href={"https://www.mcj.co"}
+                target="_blank"
+                rel={"noopener noreferrer"}
+              >
+                <span>Full site</span>
               </a>
-              </LinkContainer>
+              <a href={mcjIMG} target="_blank" rel={"noopener noreferrer"}>
+                <span>Carousel</span>
+              </a>
+            </LinkContainer>
             <h4>Skills Demonstrated:</h4>
             <ul>
-              <li>Ability to create isolated components consistent with the existing design framework of a site</li>
+              <li>
+                Ability to create isolated components consistent with the
+                existing design framework of a site
+              </li>
             </ul>
           </PortfolioProject>
           {/* <PortfolioProject>
@@ -231,8 +233,9 @@ const PortfolioSection = () => {
             </ul>
           </PortfolioProject> */}
         </PortfolioProjectContainer>
-      </div>
-    </PortfolioContainer>
+        {/* </div> */}
+      </PortfolioContainer>
+    </Outer>
   )
 }
 

@@ -11,7 +11,7 @@ import Nav from "../Nav/Nav"
 // import "../../theme/globalFonts.css"
 import "./SecondaryLayout.module.css"
 
-const SecondaryLayout = ({ children }) => {
+const SecondaryLayout = ({ children, maxW }) => {
   const initialState = {
     opacity: 0,
   }
@@ -57,7 +57,7 @@ const SecondaryLayout = ({ children }) => {
     <FadeContainer>
       <PageContainer opacity={state.opacity}>
         <MainContent>{children}</MainContent>
-        <Nav />
+        <Nav maxW={maxW} />
       </PageContainer>
     </FadeContainer>
     // </ThemeProvider>

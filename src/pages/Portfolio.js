@@ -4,7 +4,7 @@ import PortfolioSection from "../components/PortfolioSection/PortfolioSection"
 
 const Portfolio = () => {
   return (
-    <SecondaryLayout>
+    <SecondaryLayout maxW={100}>
       <PortfolioSection />
     </SecondaryLayout>
   )

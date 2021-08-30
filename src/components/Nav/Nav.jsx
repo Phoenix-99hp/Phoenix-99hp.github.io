@@ -3,12 +3,12 @@ import { StyledNavContainer, StyledNavItem, StyledNavList } from "./NavStyle"
 import { Link } from "gatsby"
 import Resume from "../../images/resume.pdf"
 
-const Nav = () => {
+const Nav = ({ maxW }) => {
   // const [clicked, setClicked] = useState(false)
-
+  console.log(maxW)
   return (
     <StyledNavContainer>
-      <StyledNavList>
+      <StyledNavList maxW={maxW}>
         <Link to="/About">
           <StyledNavItem
             selected={

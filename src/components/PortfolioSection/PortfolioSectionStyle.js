@@ -1,9 +1,19 @@
 import styled from "styled-components"
 
+export const Outer = styled.div`
+  display: block;
+  flex-wrap: wrap;
+  // width: 100%;
+  max-width: 1100px;
+  width: 100%;
+  margin: 0 auto;
+`
+
 export const PortfolioContainer = styled.div`
   // padding: 0 10px;
   max-width: 1100px;
   width: 100%;
+  flex: 1 1 100%;
   // min-height: calc(100vh - 80px);
   display: flex;
   align-self: center;
@@ -18,34 +28,38 @@ export const PortfolioContainer = styled.div`
   // }
 
   > div {
-    align-self: flex-start;
+    // align-self: flex-start;
     width: 100%;
-    flex: 1 1 100%;
+    // flex: 1 1 100%;
     text-align: center;
   }
 `
 
 export const PortfolioProjectContainer = styled.div`
-  display: grid;
-  grid-template: repeat(2, minmax(300px, 1fr)) / repeat(3, minmax(300px, 1fr));
-  grid-gap: 15px 15px;
-  justify-content: space-evenly;
+  display: flex;
+  // grid-template: repeat(1, minmax(300px, 1fr)) / repeat(3, minmax(300px, 1fr));
+  // grid-gap: 15px 15px;
+  justify-content: space-between;
+  margin: 0 auto;
+
+  // @media screen and (max-width: 1200px) {
+  //   grid-template: repeat(3, minmax(300px, 1fr)) / repeat(
+  //       2,
+  //       minmax(300px, 300px)
+  //     );
+  //   justify-content: space-evenly;
+  // }
 
   @media screen and (max-width: 1200px) {
-    grid-template: repeat(3, minmax(300px, 1fr)) / repeat(
-        2,
-        minmax(300px, 300px)
-      );
-    justify-content: space-evenly;
-  }
-
-  @media screen and (max-width: 950px) {
-    grid-template: repeat(5, minmax(300px, 1fr)) / repeat(1, minmax(200px, 1fr));
-    justify-content: space-evenly;
+    display: grid;
+    grid-template: repeat(3, minmax(300px, 1fr)) / repeat(1, minmax(200px, 1fr));
+    grid-gap: 15px 15px;
+    // justify-content: center;
   }
 `
 
 export const PortfolioProject = styled.div`
+  box-sizing: border-box;
   color: white;
   display: flex;
   justify-content: center;
@@ -53,12 +67,20 @@ export const PortfolioProject = styled.div`
   max-width: 300px;
   width: 100%;
   border: 2px solid white;
-  margin: 0 auto;
+  // margin: 0 auto;
   text-align: center;
   padding: 20px;
   // margin: 10px;
   border-radius: 10px;
   flex: 1 1 100%;
+
+  // &:last-of-type {
+  //   margin-right: 0;
+  // }
+
+  // &:first-of-type {
+  //   margin-left: 0;
+  // }
 
   > h4 {
     flex: 1 1 100%;
@@ -89,6 +111,10 @@ export const PortfolioProject = styled.div`
     font-family: "Montserrat";
   }
 
+  @media screen and (max-width: 1200px) {
+    margin: 0 auto !important;
+  }
+
   @media screen and (max-width: 330px) {
     box-sizing: border-box;
     width: 250px;
@@ -115,6 +141,10 @@ export const ProjectsTitle = styled.h1`
   padding: 20px;
   font-family: "Montserrat";
   font-weight: bold;
+
+  @media screen and (max-width: 1200px) {
+    margin-top: 80px;
+  }
 
   @media screen and (max-width: 430px) {
     font-size: 40px;
